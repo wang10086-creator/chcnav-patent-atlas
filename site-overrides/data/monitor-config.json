@@ -4,11 +4,59 @@
     "name": "Incopat",
     "entryUrl": "https://www-incopat-com-s-6.proxy.itic-sci.com/",
     "cloudStatus": "not-connected",
-    "checkedAt": "2026-11-03T07:27:17.948054Z",
+    "checkedAt": "2026-11-03T09:13:14Z",
     "lastSuccessfulRunAt": null,
-    "probeResult": "cloud-network-restricted",
-    "probeDetail": "HTTPS 代理 403；Chromium ERR_TUNNEL_CONNECTION_FAILED。尚未到登录页；登录、检索、分页和导出均未验收。",
-    "safeHandoverAvailable": false
+    "probeResult": "local-interactive-verified-cloud-not-connected",
+    "probeDetail": "已通过用户授权的本机 Chrome 验证指定入口访问、登录、精确申请人检索及分页，并完成 10 批全量导出与本地比对：938 条文献、807 个申请、2333 条带日期法律历史、938 条首次状态观察，新增申请、新文献版本、重复行及异常均为 0。结果待人工核对，未发布。持续云执行端与定时任务尚未接通；此前 403 为旧云环境探测记录。",
+    "safeHandoverAvailable": false,
+    "lastSuccessfulAutomaticRun": null,
+    "interactiveValidation": {
+      "environment": "user-authorized-local-chrome",
+      "checkedAt": "2026-11-03T09:13:14Z",
+      "sourceExecutedAt": "2026-11-03T17:08:19+08:00",
+      "access": "verified",
+      "login": "authenticated",
+      "search": "verified",
+      "paging": "verified",
+      "exportDownloadChannel": "verified",
+      "exportContentAndCoverage": "verified-complete",
+      "resultCountBasis": "publications",
+      "expectedExportBatches": 10,
+      "downloadedExportBatches": 10,
+      "sampledResultPages": [
+        {
+          "page": 2,
+          "firstResult": 21,
+          "lastResult": 40
+        },
+        {
+          "page": 47,
+          "firstResult": 921,
+          "lastResult": 938,
+          "rows": 18
+        }
+      ],
+      "comparisonState": "review-required",
+      "humanReviewRequired": true,
+      "published": false,
+      "automatic": false,
+      "counts": {
+        "distinctPublications": 938,
+        "applications": 807,
+        "datedLegalHistoryEntries": 2333,
+        "firstStatusObservations": 938,
+        "stateChanges": 0,
+        "newApplicationCount": 0,
+        "newPublicationVersions": 0,
+        "duplicateRows": 0,
+        "anomalies": 0
+      }
+    },
+    "previousCloudProbe": {
+      "checkedAt": "2026-11-03T07:27:17.948054Z",
+      "probeResult": "cloud-network-restricted",
+      "probeDetail": "HTTPS 代理 403；Chromium ERR_TUNNEL_CONNECTION_FAILED。尚未到登录页；登录、检索、分页和导出均未验收。"
+    }
   },
   "profiles": [
     {

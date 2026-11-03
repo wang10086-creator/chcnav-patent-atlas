@@ -1,0 +1,56 @@
+# 原生 Incopat 分批导出与本地比对
+
+原始 XLSX、真实执行清单、完整证据 URL 和报告应保存在公开仓库之外。脚本不会上传文件、更新网站或发送通知。
+
+## 准备规范 CSV
+
+在 Incopat 原生导出窗口记录完整申请人检索式、国家/文献版本、日期范围、未合并的结果总数和导出限制。保存全部不重叠的批次，例如每批 100 条的 `1-100` 至末批；不得用扩大申请人范围的测试文件代替正式范围。
+
+在私有目录保存清单，文件路径相对清单解析：
+
+```json
+{
+  "searchQuery": "填写来源实际执行的完整检索式",
+  "totalResults": 938,
+  "batches": [
+    {"path": "batch-001-100.xlsx", "range": "1-100", "downloadedAt": "填写实际带时区下载时间"},
+    {"path": "batch-101-200.xlsx", "range": "101-200", "downloadedAt": "填写实际带时区下载时间"}
+  ]
+}
+```
+
+上例只展示前两批的写法，并非完整导出。必须按真实文件补全全部批次。
+
+```text
+python scripts/prepare_incopat_exports.py --manifest /private/batches.json --output /private/prepared
+```
+
+`prepare_incopat_exports.py` 与 `import_incopat.py` 共用 `incopat_xlsx_native.py` 的解析逻辑。它读取物理 XML 行，处理原生导出的错误 `A1` 范围声明、下载简介、标题空格、Excel 日期和超链接关系。完整历史状态仅按明确公告日期拆分，不用“专利有效性”推断当前法律状态。
+
+输出包括规范 CSV、逐原始记录和单元格审计、每文件 SHA-256、原始行号、序号、下载简介及完整性审计。缺批、重复/重叠范围、简介检索式不一致、来源数量不一致或完整公开号重复时，审计为 `exportComplete=false`，命令退出码为 2，不能认定监控成功。无法解析的必需列、编号单元格或历史状态结构也会拒绝处理，不补造数据。
+
+一次文献可能有多个历史事件行。来源总数口径须选 `publications`；例如 938 条原始文献拆为 2333 个事件行时，来源总数仍是 938。
+
+## 比对和复核
+
+先确认审计 `exportComplete=true` 且 `issues` 为空，再准备真实执行元数据：`searchQuery`、`timeFrom`、`timeTo`、带时区的 `executedAt`、`totalResults`、`resultCountBasis=publications`、`expectedPages`、`downloadedPages`、`exportComplete=true`、`loginStatus=authenticated` 和指定 `sourceUrl`。分页数字必须注明单位：原生导出范围批次与检索列表页面是不同口径；保留原始清单及每批哈希，不通过改总数消除不完整。
+
+```text
+python scripts/import_incopat.py --export /private/prepared/incopat-canonical.csv --metadata /private/run.json --baseline _site/data/portfolio-current.json --count-basis publications --output /private/review.json
+```
+
+首次真实运行省略 `--previous`，结果为首次状态观察并待人工复核，不能称已证实的状态变化。只有真实审核通过后才能另存已审核观察基线；不要通过程序代替人工勾选审核。
+
+## 网站直接导入的边界
+
+当前开发分支网页的 `monitor-xlsx.js` 会拒绝包含非空“下载简介”的多表原生文件，也不读取原生超链接关系、不映射含空格的中文标题、不拆完整历史状态日期。本次修复的是本地命令路径；网页原生 XLSX 不能据此宣称验收通过。
+
+网页应导入上述单个规范 CSV，核心字段已经按支持的列名提供。网页表单默认来源总数口径为“完整公开号去重文献数”。其现有“页数”字段不能完整表示十个原生导出批次与例如 47 个列表页的区别，须连同报告保存执行清单和适配审计。真实网页上传、表单填写、报告下载及手机端交互仍需在开发预览里单独验证；此文档不表示这些交互已实测。
+
+## 回归验证
+
+```text
+python -m unittest discover -s scripts/monitor_tests -p "test_*incopat*.py" -v
+```
+
+隔离 fixture 覆盖错误范围、简介多表、超链接、日期、历史事件、必需列/公式拒绝、缺批、重复范围、来源式不一致、仓库内输出拒绝和 UTF-8 中文跨数据块传输。Windows 沙箱可设置 `CODEX_TEST_TMPDIR` 为工作区可写临时目录。

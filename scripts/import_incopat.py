@@ -17,6 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def xlsx_rows(path, sheet_name=None):
+    from incopat_xlsx_native import native_xlsx_rows
+    native = native_xlsx_rows(path, sheet_name)
+    if native is not None:
+        return native
     import openpyxl
     workbook = openpyxl.load_workbook(path, read_only=True, data_only=False)
     if sheet_name:
@@ -27,6 +31,8 @@ def xlsx_rows(path, sheet_name=None):
         sheets = list(workbook)
     tables = []
     for sheet in sheets:
+        # Some exporters incorrectly declare A1 even when physical rows exist.
+        sheet.reset_dimensions()
         values = list(sheet.iter_rows(values_only=True))
         values = [list(row) for row in values if any(v is not None and str(v).strip() for v in row)]
         if values:
@@ -73,8 +79,8 @@ def main():
     metadata.update(fileSha256=hashlib.sha256(data).hexdigest(), fileName=args.export_file.name)
     if args.count_basis:
         metadata['resultCountBasis'] = args.count_basis
-    payload = dict(metadata=metadata, baseline=json.loads(args.baseline.read_text()), previous=json.loads(args.previous.read_text()) if args.previous else None)
-    config = json.loads((ROOT / 'site-overrides/data/monitor-config.json').read_text())
+    payload = dict(metadata=metadata, baseline=json.loads(args.baseline.read_text(encoding='utf-8-sig')), previous=json.loads(args.previous.read_text(encoding='utf-8-sig')) if args.previous else None)
+    config = json.loads((ROOT / 'site-overrides/data/monitor-config.json').read_text(encoding='utf-8-sig'))
     payload['profile'] = next((p for p in config['profiles'] if p['id'] == args.profile), None)
     if not payload['profile']:
         parser.error('未知竞争对手 profile；先在配置中添加有证据的精确名称')
@@ -93,9 +99,9 @@ def main():
                 payload['csvText'] = data.decode('gb18030')
         else:
             raise ValueError('只支持 CSV、TSV 或 XLSX，不处理可执行宏或加密文件')
-        bridge = "const c=require(process.argv[1]);let s='';process.stdin.on('data',d=>s+=d);process.stdin.on('end',()=>{const p=JSON.parse(s),rows=p.rows||c.parseCSV(p.csvText);console.log(JSON.stringify(c.compare(rows,p.baseline,p.metadata,p.profile,p.previous),null,2));});"
+        bridge = "const c=require(process.argv[1]);let s='';process.stdin.setEncoding('utf8');process.stdin.on('data',d=>s+=d);process.stdin.on('end',()=>{const p=JSON.parse(s),rows=p.rows||c.parseCSV(p.csvText);console.log(JSON.stringify(c.compare(rows,p.baseline,p.metadata,p.profile,p.previous),null,2));});"
         result = subprocess.run(['node', '-e', bridge, str(ROOT / 'site-overrides/patent-monitor-core.js')],
-            input=json.dumps(payload, ensure_ascii=False), text=True, capture_output=True, check=False)
+            input=json.dumps(payload, ensure_ascii=False), text=True, encoding='utf-8', capture_output=True, check=False)
         if result.returncode:
             raise ValueError('解析／比对失败：' + result.stderr[-1600:])
         report = json.loads(result.stdout)
@@ -104,7 +110,7 @@ def main():
             runStateLabel='导入失败，未完成核查', metadata=metadata, counts={},
             anomalies=[dict(type='import-failed', reason=str(error))], publicationState='review-only-not-published')
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(dict(report=str(output), state=report['runState'], counts=report['counts']), ensure_ascii=False))
     return 2 if report.get('anomalies') else 0
 
