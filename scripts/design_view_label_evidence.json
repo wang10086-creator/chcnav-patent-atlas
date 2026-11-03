@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "records": {
+    "CN304194747S": {
+      "pdfSha256": "03ba874dbb444bf23b72d56a8ded17166050a5dc13d4e3c6b8a2f4d7083f4e0f",
+      "pageNumber": 2,
+      "labels": [
+        "主视图",
+        "后视图",
+        "左视图",
+        "右视图",
+        "俯视图",
+        "仰视图",
+        "立体图",
+        "使用状态参考图"
+      ],
+      "source": "Visual review of the rendered original PDF page; labels are baked into raster images; not human verification.",
+      "imageOrder": "PDF image occurrence order, verified against original page: row-major 2 columns × 4 rows",
+      "expectedRasterImageCount": 8
+    }
+  }
+}
