@@ -69,6 +69,11 @@ def main():
     parser.add_argument('--profile', default='chcnav')
     parser.add_argument('--sheet')
     parser.add_argument('--count-basis', choices=('publications', 'rows'), help='来源总数的真实口径：完整公开号去重文献数，或原始导出行数；覆盖 run.json 同名字段')
+    parser.add_argument('--export-audit', type=Path, help='私有的 incopat-adaptation-audit.json；核对原始批次范围、文件校验值及规范 CSV')
+    parser.add_argument('--result-pages', type=int, help='检索列表的实际总页数，不是导出批次数，不代表已逐页浏览')
+    parser.add_argument('--result-page-size', type=int, help='检索列表实际每页条数，用于核对总页数')
+    parser.add_argument('--expected-export-batches', type=int, help='应导出文件批次数，与列表页数分开记录')
+    parser.add_argument('--downloaded-export-batches', type=int, help='实际完整下载的导出批次数')
     parser.add_argument('--output', type=Path, required=True, help='Private path outside this public repository')
     args = parser.parse_args()
     output = args.output.resolve()
@@ -79,6 +84,25 @@ def main():
     metadata.update(fileSha256=hashlib.sha256(data).hexdigest(), fileName=args.export_file.name)
     if args.count_basis:
         metadata['resultCountBasis'] = args.count_basis
+    if args.export_audit:
+        audit_bytes = args.export_audit.read_bytes()
+        audit = json.loads(audit_bytes.decode('utf-8-sig'))
+        if not isinstance(audit, dict):
+            parser.error('导出适配审计必须是 JSON 对象')
+        metadata.update(coverageSchemaVersion=2, exportAudit=audit,
+                        exportAuditSha256=hashlib.sha256(audit_bytes).hexdigest(),
+                        exportAuditFileName=args.export_audit.name)
+        metadata.setdefault('resultCountBasis', 'publications')
+        for field in ('resultPageCount', 'resultPageSize', 'expectedExportBatches', 'downloadedExportBatches'):
+            if field not in metadata and audit.get(field) is not None:
+                metadata[field] = audit[field]
+    for field, value in (('resultPageCount', args.result_pages),
+                         ('resultPageSize', args.result_page_size),
+                         ('expectedExportBatches', args.expected_export_batches),
+                         ('downloadedExportBatches', args.downloaded_export_batches)):
+        if value is not None:
+            metadata[field] = value
+            metadata['coverageSchemaVersion'] = 2
     payload = dict(metadata=metadata, baseline=json.loads(args.baseline.read_text(encoding='utf-8-sig')), previous=json.loads(args.previous.read_text(encoding='utf-8-sig')) if args.previous else None)
     config = json.loads((ROOT / 'site-overrides/data/monitor-config.json').read_text(encoding='utf-8-sig'))
     payload['profile'] = next((p for p in config['profiles'] if p['id'] == args.profile), None)

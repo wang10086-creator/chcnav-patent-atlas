@@ -1,0 +1,17 @@
+{
+  "isolatedOnly": true,
+  "productionCredentialsUsed": false,
+  "loginAndSessionContract": true,
+  "httpOnlyCookieNotReadable": true,
+  "noLocalOrSessionStorage": true,
+  "explicitSourceLoginAndCompleteness": true,
+  "uploadBytesAndCoverageFieldsPreserved": true,
+  "csrfMutationHeaders": true,
+  "approvalRequiresHumanAcknowledgment": true,
+  "untrustedTextEscaped": true,
+  "desktop": true,
+  "mobile390NoOverflow": true,
+  "unconfiguredFailClosed": true,
+  "logoutClearsWorkspace": true,
+  "pageErrors": []
+}

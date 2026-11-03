@@ -1,0 +1,25 @@
+{
+  "isolatedPrivateServiceOnly": true,
+  "productionAccountConfigured": false,
+  "productionDataChanged": false,
+  "realServiceLogin": true,
+  "unauthenticatedLocked": true,
+  "httpOnlySession": true,
+  "noBrowserStorage": true,
+  "serverCsvImportAndCoverage": true,
+  "firstObservationNotChange": true,
+  "manualApprovalAndBaselinePersistence": true,
+  "privateReportDownload": true,
+  "reviewedBaselineDownload": true,
+  "sanitizedSummaryDownload": true,
+  "secondRunComparesReviewedBaseline": true,
+  "serverRejectPersistsWithoutNewBaseline": true,
+  "expiredSessionReturnsLogin": true,
+  "csrfAndOriginSent": true,
+  "mobile390NoOverflow": true,
+  "pageErrors": [],
+  "isolatedRunIds": [
+    "8df86bb66bac4c5fbd448589e6aff7b8",
+    "803d6e75835a472a8e7d8f002a42f2d3"
+  ]
+}

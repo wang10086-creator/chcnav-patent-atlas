@@ -12,6 +12,9 @@ base = 'https://monitor.local/'
 profile = dict(id='test-only', name='隔离测试公司', inScopeApplicantNames=['隔离测试公司'], aliases=[],
     relatedApplicantCandidates=[], nameEvidence='仅用于隔离测试', searchRule='精确名称测试')
 config = json.loads((ROOT / 'site-overrides/data/monitor-config.json').read_text())
+# Exercise the preserved legacy standalone comparator in isolation; the actual
+# public configuration is separately tested as read-only, never admin-gated by JS.
+config.pop('manualMonitoring', None)
 config['profiles'] = [profile, dict(profile, id='empty-profile', name='另一隔离测试公司', inScopeApplicantNames=['另一隔离测试公司'])]
 baseline = [dict(id='CN100000001A', applicationNumber='CN202600000001.1', applicants='隔离测试公司', legalStatus='当前法律状态未核验')]
 headers = ['公开（公告）号', '申请号', '名称', '申请人', '当前法律状态']

@@ -23,12 +23,20 @@ def text(el):
     return ''.join(el.itertext()) if el is not None else ''
 
 
+def safe_xml(data):
+    # NUL removal also detects ASCII markup encoded as UTF-16 or UTF-32.
+    probe = data.replace(b'\x00', b'').upper()
+    if b'<!DOCTYPE' in probe or b'<!ENTITY' in probe:
+        raise ValueError('XLSX XML contains a forbidden DTD or entity declaration')
+    return ET.fromstring(data)
+
+
 def relationships(z, path):
     parent, name = posixpath.split(path)
     relpath = posixpath.join(parent, '_rels', name + '.rels')
     if relpath not in z.namelist():
         return {}
-    return {r.attrib['Id']: r.attrib for r in ET.fromstring(z.read(relpath))}
+    return {r.attrib['Id']: r.attrib for r in safe_xml(z.read(relpath))}
 
 
 def resolve(base, target):
@@ -39,16 +47,16 @@ def read_workbook(path):
     data = path.read_bytes()
     sheets = []
     with ZipFile(path) as z:
-        wb = ET.fromstring(z.read('xl/workbook.xml'))
+        wb = safe_xml(z.read('xl/workbook.xml'))
         wb_rels = relationships(z, 'xl/workbook.xml')
         prop = wb.find('s:workbookPr', NS)
         epoch = dt.datetime(1904, 1, 1) if prop is not None and prop.attrib.get('date1904') in ('1', 'true') else dt.datetime(1899, 12, 30)
         strings = []
         if 'xl/sharedStrings.xml' in z.namelist():
-            strings = [text(si) for si in ET.fromstring(z.read('xl/sharedStrings.xml'))]
+            strings = [text(si) for si in safe_xml(z.read('xl/sharedStrings.xml'))]
         for s in wb.find('s:sheets', NS):
             spath = resolve('xl/workbook.xml', wb_rels[s.attrib[RID]]['Target'])
-            root = ET.fromstring(z.read(spath))
+            root = safe_xml(z.read(spath))
             rels = relationships(z, spath)
             links = {}
             for link in root.findall('s:hyperlinks/s:hyperlink', NS):

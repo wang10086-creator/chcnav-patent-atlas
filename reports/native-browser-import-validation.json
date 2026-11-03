@@ -1,0 +1,24 @@
+{
+  "module": "site-overrides/monitor-xlsx.js",
+  "moduleSha256": "53711e96832a653f5692e61814f6990249d7ecf9077b79566d1d284e18dea0f1",
+  "nativeFixtureBrowserCases": 17,
+  "genericFixtureBrowserCases": 12,
+  "passed": true,
+  "parserNetworkRequests": 0,
+  "api": "MonitorXlsx.read(ArrayBuffer) -> Array with non-enumerable xlsxInfo",
+  "nativeCompatibility": [
+    "physical XML rows despite A1 dimension",
+    "known download-introduction auxiliary sheet",
+    "whitespace-normalized native headers",
+    "hyperlink relationship provenance",
+    "1900/1904 and compact dates",
+    "dated legal histories expanded without inferring validity",
+    "source SHA and physical-row/batch audit"
+  ],
+  "limitations": [
+    "Tests use isolated fixtures reproducing the observed native export structure.",
+    "The private real 10-batch XLSX corpus was not available in this child task and was not claimed as tested.",
+    "Parser does not establish administrator identity; parent private workbench/backend provides authorization.",
+    "Incomplete or mismatched introduction metadata remains issues/sourceCoverageVerified=false; callers must not discard those anomalies."
+  ]
+}

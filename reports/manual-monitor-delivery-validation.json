@@ -1,0 +1,141 @@
+{
+  "validatedAt": "2026-11-03T10:22:29.214531+00:00",
+  "status": "pass",
+  "branch": "codex/manual-monitor-admin",
+  "baseCommit": "7d7c308188779547f5bfff228d077d4e4f651f23",
+  "implementation": {
+    "publicReadOnly": true,
+    "administratorAuthorization": "private loopback server, local account",
+    "manualImport": true,
+    "reviewedBaselineComparison": true,
+    "automaticMonitoring": false,
+    "productionAdministratorConfigured": false,
+    "productionPublished": false,
+    "githubIdentityReused": false,
+    "incopatApiUsed": false
+  },
+  "sourceAcceptance": {
+    "existingRealSourceSummaryPreserved": true,
+    "publications": 938,
+    "applications": 807,
+    "datedLegalHistoryRows": 2333,
+    "firstObservations": 938,
+    "resultListPages": 47,
+    "exportBatches": 10,
+    "realPrivateFilesTestedInThisWorkbench": false,
+    "initialObservationsReviewed": false
+  },
+  "regressionCommands": {
+    "native-cli": [
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/monitor_tests",
+          "-p",
+          "test_*incopat*.py",
+          "-v"
+        ],
+        "exitCode": 0,
+        "seconds": 4.94
+      }
+    ],
+    "admin-server-security": [
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/monitor_tests",
+          "-p",
+          "test_manual_admin*.py",
+          "-v"
+        ],
+        "exitCode": 0,
+        "seconds": 7.8
+      }
+    ],
+    "monitor-core-coverage": [
+      {
+        "command": [
+          "node",
+          "scripts/monitor_tests/test_monitor_core.js"
+        ],
+        "exitCode": 0,
+        "seconds": 0.12
+      },
+      {
+        "command": [
+          "node",
+          "scripts/monitor_tests/test_manual_coverage.js"
+        ],
+        "exitCode": 0,
+        "seconds": 3.29
+      }
+    ],
+    "browser-xlsx": [
+      {
+        "command": [
+          "python3",
+          "scripts/monitor_tests/test_xlsx_browser.py"
+        ],
+        "exitCode": 0,
+        "seconds": 4.18
+      },
+      {
+        "command": [
+          "python3",
+          "scripts/monitor_tests/test_native_incopat_browser.py"
+        ],
+        "exitCode": 0,
+        "seconds": 2.28
+      }
+    ],
+    "public-readonly": [
+      {
+        "command": [
+          "python3",
+          "scripts/monitor_tests/test_monitor_public_readonly.py"
+        ],
+        "exitCode": 0,
+        "seconds": 5.28
+      }
+    ]
+  },
+  "validation": {
+    "originalDocuments": 938,
+    "originalApplications": 807,
+    "designDocuments": 152,
+    "designPdfPagesRendered": 552,
+    "viewCrops": 1639,
+    "newWebpFiles": 4382,
+    "originalImagesPreserved": 944,
+    "originalSourceArtifactFiles": 989,
+    "pdfAssociationsPreserved": 938,
+    "staticSiteBytes": 147010069,
+    "publicSiteContainsPrivateAdminUi": false
+  },
+  "limitations": [
+    "Real 10 private XLSX exports still require workbench acceptance and administrator review.",
+    "Local console must initialize a real administrator before use.",
+    "Service binds only 127.0.0.1 and is not a public/shared authentication backend.",
+    "Website publication remains a separate user-approved step.",
+    "No automated Incopat login, export, polling or notification."
+  ],
+  "packageValidation": {
+    "passed": true,
+    "isolatedOnly": true,
+    "baselinePublications": 938,
+    "unconfiguredFailClosed": true,
+    "isolatedLoginAndConfig": true,
+    "staticAllowlist": true,
+    "privateDataIncluded": false,
+    "sha256": "aa4074d8add9dcfb462f261c8978d856fab0b168adf9f75ae7640b1852355b8c",
+    "bytes": 331819
+  }
+}

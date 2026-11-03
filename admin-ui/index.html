@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>专利监控 · 管理员工作台</title>
+  <link rel="stylesheet" href="/static/admin.css">
+  <script src="/static/admin.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="管理员工作台首页">华测导航 <span>专利监控</span></a>
+    <div id="session-tools" hidden><span id="session-user"></span><button id="logout-button" class="text-button" type="button">退出登录</button></div>
+    <span id="private-label" class="private-label">私有管理员工作台</span>
+  </header>
+  <main>
+    <section id="auth-view" class="auth-view" aria-labelledby="auth-title">
+      <div class="auth-intro"><span class="eyebrow">MANUAL PATENT REVIEW</span><h1 id="auth-title">管理员登录</h1><p>手动导入授权来源，核对专利变化，审核后保存观察基线。</p></div>
+      <div id="auth-message" class="notice" role="status">正在核对管理服务与会话状态…</div>
+      <form id="login-form" class="login-form" hidden>
+        <label>管理员账号<input id="login-username" name="username" autocomplete="username" maxlength="120" required></label>
+        <label>管理员密码<input id="login-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required></label>
+        <button id="login-button" class="primary" type="submit">登录私有工作台</button>
+      </form>
+      <p class="muted auth-footnote">此处验证本工作台管理员，不接收 IncoPat 密码、验证码或浏览器 Cookie。管理员未配置时，所有管理操作保持锁定。</p>
+    </section>
+    <div id="workspace" hidden></div>
+    <noscript><p class="notice warning">此工作台需要 JavaScript 执行受保护的登录和手动导入。正式专利数据不会因此改变。</p></noscript>
+  </main>
+  <footer>仅手动执行 · 私有来源审计 · 人工核对后保存 · 不自动修改公开网站</footer>
+</body>
+</html>

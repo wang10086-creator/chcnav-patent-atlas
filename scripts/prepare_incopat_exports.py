@@ -111,15 +111,31 @@ def prepare(manifest_path, output_dir):
         issues.append({'type': 'duplicate-publications', 'reason': '多个原始记录有相同完整公开号'})
     if len(pubs) != total or len(set(pubs)) != total:
         issues.append({'type': 'total-results', 'reason': '导出记录或唯一文献总数与来源不一致'})
+    declared_batches = manifest.get('expectedExportBatches')
+    if declared_batches is not None and (type(declared_batches) is not int or declared_batches != len(files)):
+        issues.append({'type': 'export-batch-count', 'reason': '清单声明的应导出批次数与实际原文件数不一致'})
+    result_pages = manifest.get('resultPageCount')
+    result_page_size = manifest.get('resultPageSize')
+    if result_pages is not None and (type(result_pages) is not int or result_pages < (0 if total == 0 else 1)):
+        issues.append({'type': 'result-page-count', 'reason': '检索列表总页数无效，不能使用导出批次数代替'})
+    if result_page_size is not None:
+        if type(result_page_size) is not int or result_page_size < 1:
+            issues.append({'type': 'result-page-size', 'reason': '检索列表每页条数无效'})
+        elif result_pages is not None and total and result_pages != (total + result_page_size - 1) // result_page_size:
+            issues.append({'type': 'result-page-count', 'reason': '检索列表页数／每页条数与来源文献总数不一致'})
     output_dir.mkdir(parents=True, exist_ok=True)
     canonical = output_dir / 'incopat-canonical.csv'
     with canonical.open('w', encoding='utf-8-sig', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    audit = {'adapterVersion': 1, 'searchQuery': query, 'sourceTotalResults': total,
+    audit = {'adapterVersion': 2, 'searchQuery': query, 'sourceTotalResults': total,
              'sourceCountBasis': 'publications', 'nativeRecords': len(pubs),
              'distinctPublications': len(set(pubs)), 'canonicalRows': len(rows),
+             'resultPageCount': result_pages, 'resultPageSize': result_page_size,
+             'expectedExportBatches': declared_batches,
+             'downloadedExportBatches': len(files),
+             'coverageNote': '检索列表页与导出范围批次分别记录；未记录列表页数时保持 null，不从批次数推断，也不声称列表页已全部浏览。',
              'eventCount': sum(bool(r['legalEvent']) for r in rows),
              'exportComplete': not issues, 'missingSequenceNumbers': missing,
              'issues': issues, 'batches': files, 'canonicalFile': canonical.name,

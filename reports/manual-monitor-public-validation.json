@@ -1,0 +1,16 @@
+{
+  "publicReadOnly": true,
+  "administrativeControlsExposed": false,
+  "frontendRoleSpoofingIgnored": true,
+  "actualExecutionTimePreserved": "2026-11-03T17:08:19+08:00",
+  "refreshDoesNotCreateExecution": true,
+  "invalidExternalWorkbenchRejected": true,
+  "malformedConfigHasNoAdministrativeControls": true,
+  "ordinaryVisitorNetworkWrites": 0,
+  "pageErrors": [],
+  "mobileOverflow": false,
+  "baselineDocuments": 938,
+  "originalPortfolioSha256": "a9e269d3bbbe7f4eacfac544621ec6398a3ceae9e9dfc1b83669977b2bee71ea",
+  "originalPortfolioUnchanged": true,
+  "authorityBoundary": "Actual import, review and persistence authorization is enforced by the separate private admin service, not frontend visibility."
+}

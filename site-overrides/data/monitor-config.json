@@ -1,5 +1,12 @@
 {
   "schemaVersion": 1,
+  "manualMonitoring": {
+    "mode": "manual",
+    "publicReadOnly": true,
+    "adminWorkbenchUrl": "http://127.0.0.1:8765/",
+    "requiresAdministrator": true,
+    "automaticEnabled": false
+  },
   "source": {
     "name": "Incopat",
     "entryUrl": "https://www-incopat-com-s-6.proxy.itic-sci.com/",

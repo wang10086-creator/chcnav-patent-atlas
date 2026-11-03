@@ -4,3 +4,5 @@
 专利原文存放于 [chcnav-patent-pdfs](https://github.com/wang10086-creator/chcnav-patent-pdfs)。画像按完整公开号关联 PDF，保留公开／授权等文献版本差异。
 
 维护、构建和更新关联清单的方法见 [PDF_LINKS.md](PDF_LINKS.md)。
+
+管理员手动监控见 [MANUAL_MONITOR_ADMIN.md](MANUAL_MONITOR_ADMIN.md)；第三方 IncoPat 接入项目的核查与采用边界见 [INCOPAT_CONNECTORS.md](INCOPAT_CONNECTORS.md)。公开站只读，私有工作台不自动查询或发布。
