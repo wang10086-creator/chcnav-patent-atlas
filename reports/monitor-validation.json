@@ -1,0 +1,25 @@
+{
+  "kind": "isolated-monitor-validation",
+  "executedAt": "2026-11-03T07:47:54.703937+00:00",
+  "productionDataChanged": false,
+  "notificationsTriggered": false,
+  "externalNetworkRequestsDuringImportTests": 0,
+  "tests": {
+    "core": "PASS: status changes, first observations, application/version split, families, duplicate/multiple-event history, unknown/missing status, conflicts, scope, dates/timezones, completeness",
+    "browserImport": "PASS: actual CSV/XLSX, profile switching, review and baseline downloads, no-change, expired login, XSS escaping, desktop/mobile",
+    "xlsx": "PASS: 12 cases including shared/inline strings, archive integrity, dates, multi-sheet refusal, malformed input and missing identifiers",
+    "cli": "PASS: XLSX and SHA-256, first observations/new version, incomplete export, public-output refusal",
+    "countBasis": "PASS: explicit publications/rows, legacy rows marker; 1 publication + 2 legal-event rows accepted as totalResults=1 under publications; events retained, duplicate rows recorded, incomplete pages still fail"
+  },
+  "realIncopatAcceptance": {
+    "entry": "https://www-incopat-com-s-6.proxy.itic-sci.com/",
+    "probeAt": "2026-11-03T07:27:17.948054Z",
+    "result": "HTTPS CONNECT proxy 403; Chromium ERR_TUNNEL_CONNECTION_FAILED",
+    "loginVerified": false,
+    "searchVerified": false,
+    "exportVerified": false,
+    "automaticExecutorConnected": false,
+    "secureHandoverAvailable": false
+  },
+  "notes": "Isolated tests are not production monitor runs; export/observation/report files remain browser-local or private paths."
+}

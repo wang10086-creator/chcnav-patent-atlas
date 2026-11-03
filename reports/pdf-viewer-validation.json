@@ -1,0 +1,56 @@
+{
+  "render": {
+    "publication": "CN308935268S",
+    "pdfPage": 3,
+    "pdfPageCount": 4,
+    "nonwhitePixels": 74175,
+    "rawFetchCountAfterNavigation": 1,
+    "exactCommittedBytes": true,
+    "mobileNoOverflow": true,
+    "pageErrors": []
+  },
+  "?id=CN000000000S&page=1": {
+    "expectedError": "白名单",
+    "rawFetchCount": 0,
+    "noWrongPage": true
+  },
+  "?page=1": {
+    "expectedError": "完整公开号",
+    "rawFetchCount": 0,
+    "noWrongPage": true
+  },
+  "?id=CN308935268S&page=-1": {
+    "expectedError": "整数",
+    "rawFetchCount": 0,
+    "noWrongPage": true
+  },
+  "?id=CN308935268S&page=999": {
+    "expectedError": "超出",
+    "rawFetchCount": 1,
+    "noWrongPage": true
+  },
+  "networkFailureFallback": {
+    "realSavedPage": true,
+    "requestedPagePreserved": true,
+    "previousPageWorks": true,
+    "explicitFailureNotice": true
+  },
+  "corruptedResponse": {
+    "sha256Rejected": true,
+    "noWrongPdfRendered": true,
+    "exactSavedPageFallback": true
+  },
+  "liveRawNetwork": {
+    "status": "CN308935268S · 第 3 / 4 页 · 已保存的原页渲染图",
+    "message": "PDF 原文件当前无法读取或渲染，已展示对应页的原页渲染图。\n原因：原始 PDF 网络请求失败（可能是网络或跨域访问受限）。当前图片不是本次实时 PDF 渲染；它对应同一公开号、同一 PDF 版本和校验值。可重试读取或使用下方原始文件入口。",
+    "canvasVisible": false,
+    "fallbackVisible": true
+  },
+  "apiDocumentation": [
+    "https://mozilla.github.io/pdf.js/examples/",
+    "https://mozilla.github.io/pdf.js/api/draft/module-pdfjsLib.html"
+  ],
+  "pdfjsVersion": "6.5.438",
+  "vendorBytes": 6561304,
+  "validationNote": "Canvas rendering and byte-integrity tests use the exact committed original PDF bytes in an isolated browser route. Separate live raw-network test accurately reports fallback on failed network access."
+}

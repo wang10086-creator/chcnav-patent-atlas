@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "name": "Incopat",
+    "entryUrl": "https://www-incopat-com-s-6.proxy.itic-sci.com/",
+    "cloudStatus": "not-connected",
+    "checkedAt": "2026-11-03T07:27:17.948054Z",
+    "lastSuccessfulRunAt": null,
+    "probeResult": "cloud-network-restricted",
+    "probeDetail": "HTTPS 代理 403；Chromium ERR_TUNNEL_CONNECTION_FAILED。尚未到登录页；登录、检索、分页和导出均未验收。",
+    "safeHandoverAvailable": false
+  },
+  "profiles": [
+    {
+      "id": "chcnav",
+      "name": "华测导航（CHCNAV）",
+      "inScopeApplicantNames": [
+        "上海华测导航技术股份有限公司"
+      ],
+      "nameEvidence": "现有 938 条文献申请人字段均记载该完整名称，来源 portfolio-current.json；不代表当前工商名称或当前专利权人已官方核验。",
+      "aliases": [],
+      "relatedApplicantCandidates": [
+        {
+          "name": "武汉华测卫星技术有限公司",
+          "documentCount": 86,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "上海双微导航技术有限公司",
+          "documentCount": 57,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "南京天辰礼达电子科技有限公司",
+          "documentCount": 34,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "武汉华测创新空间信息技术有限责任公司",
+          "documentCount": 12,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "武汉珞珈新空科技有限公司",
+          "documentCount": 6,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "中国电力科学研究院有限公司",
+          "documentCount": 4,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "西南交通大学",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "四川省公路规划勘察设计研究院有限公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "中国人民解放军63883部队",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "内蒙古大学",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "国家测绘地理信息局第二大地测量队(黑龙江第一测绘工程院)",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "国网浙江省电力有限公司信息通信分公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "国网信息通信产业集团有限公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "北京司南北斗科技发展有限公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "河北省第二测绘院",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "河北省地理信息集团有限公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "浙江省地质环境监测中心",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "国网思极位置服务有限公司",
+          "documentCount": 2,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "武汉智能鸟无人机有限公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "北京市工程地质研究所",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "北京国信华源科技有限公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "武汉市信息管网投资有限公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "武汉城市公共设施运营管理集团有限公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "航天恒星科技有限公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "中国林业科学研究院资源信息研究所",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "上海送变电工程公司",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        },
+        {
+          "name": "长江水利委员会水文局荆江水文水资源勘测局(长江水利委员会水文局荆江水环境监测中心)",
+          "documentCount": 1,
+          "relationshipVerified": false,
+          "includedInSearch": false
+        }
+      ],
+      "searchRule": "申请人完整名称精确匹配；另以已有申请号及完整公开号核查法律状态和新版本。曾用名、相关主体需人工确认后纳入，名称相似不合并。"
+    }
+  ],
+  "baseline": {
+    "documents": 938,
+    "applications": 807,
+    "officialStatusVerified": false,
+    "source": "data/portfolio-current.json"
+  },
+  "publicationPolicy": "仅生成待人工核对的本地报告和快照；不自动写入正式专利数据、不发送通知、不发布网站。",
+  "executionPlan": [
+    "在可安全接管的已授权云浏览器中开放入口；用户自行处理机构授权、验证码或登录，禁止在公开仓库保存会话。",
+    "首次人工验收精确申请人检索、结果分页和全量著录信息导出，保存检索条件、数量、时间范围及文件校验值。",
+    "将导出 CSV 用本页手动导入，或使用 Python 命令处理 XLSX；先人工核对变化与新增。",
+    "执行端与登录可靠后再单独申请定时运行；现阶段无已连接执行端或定时任务。"
+  ]
+}

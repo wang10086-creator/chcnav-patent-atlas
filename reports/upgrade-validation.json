@@ -1,0 +1,97 @@
+{
+  "productionBranchUpdated": false,
+  "productionDeployed": false,
+  "baseCommit": "78917e7cd579eba335fc703b7f1e0c93ee954e25",
+  "developmentBranch": "codex/design-views-paths-monitor",
+  "before": {
+    "status": "pass",
+    "counts": {
+      "documents": 938,
+      "applications": 807,
+      "designDocuments": 152,
+      "analyses": 807,
+      "primaryProducts": 16,
+      "paths": 21,
+      "subpaths": 109
+    },
+    "originalArtifactFiles": 989,
+    "immutableFilesPreserved": 987,
+    "originalImages": 944,
+    "originalDesignAbstractImages": 152,
+    "originalCompleteDesignViewSets": 0,
+    "originalLocalAssetReferences": 954,
+    "missingOriginalLocalReferences": [],
+    "originalExternalEvidenceReferences": 988,
+    "originalExternalEvidenceReferenceSetSha256": "80726ceb016c695272256fa26c6462f466d435cff61ef4277dec938cc80492d4",
+    "pdfAssociations": 938,
+    "checkedPdfBytes": 938,
+    "originalPresentationRetainedInZip": [
+      "atlas.js",
+      "index.html"
+    ],
+    "failures": []
+  },
+  "after": {
+    "status": "pass",
+    "counts": {
+      "documents": 938,
+      "applications": 807,
+      "designDocuments": 152,
+      "analyses": 807,
+      "primaryProducts": 16,
+      "paths": 21,
+      "subpaths": 109
+    },
+    "originalArtifactFiles": 989,
+    "immutableFilesPreserved": 987,
+    "originalImages": 944,
+    "originalDesignAbstractImages": 152,
+    "originalCompleteDesignViewSets": 0,
+    "originalLocalAssetReferences": 954,
+    "missingOriginalLocalReferences": [],
+    "originalExternalEvidenceReferences": 988,
+    "originalExternalEvidenceReferenceSetSha256": "80726ceb016c695272256fa26c6462f466d435cff61ef4277dec938cc80492d4",
+    "pdfAssociations": 938,
+    "checkedPdfBytes": 938,
+    "designEvidence": {
+      "designDocuments": 152,
+      "identityVerified": 152,
+      "identityUnconfirmed": 0,
+      "pdfPages": 552,
+      "renderedPages": 552,
+      "drawingPages": 248,
+      "expectedViews": 1639,
+      "expectedCountKnownDocuments": 152,
+      "recognizedViewLabels": 1639,
+      "splitViewImages": 1639,
+      "viewCountsAgreeDocuments": 152,
+      "assetFiles": 4382,
+      "assetBytes": 53983268,
+      "reportedCompleteManualViewReviews": 0,
+      "countingNote": "PDF page coverage, cover-stated view count, extracted labels, and split images are separate measures; no automatic assertion of a completed manual design-scope review."
+    },
+    "staticSiteBytes": 146978458,
+    "capacityBudgetBytes": 1000000000,
+    "originalPresentationRetainedInZip": [
+      "atlas.js",
+      "index.html"
+    ],
+    "failures": []
+  },
+  "limitations": [
+    "Incopat proxy rejected access before login; no authorized interactive handover or scheduled execution is connected.",
+    "Design pages and caption counts are verified; no assertion of a completed human full-view or legal-scope review.",
+    "Live raw PDF fetching from this cloud browser failed; original-byte PDF rendering and exact-source-page fallback were tested separately."
+  ],
+  "validationReports": [
+    "design-views-validation.json",
+    "monitor-validation.json",
+    "pdf-viewer-validation.json",
+    "design-gallery-browser.json",
+    "integration-validation.json",
+    "independent-ui-validation.json",
+    "reader-validation.json",
+    "preservation-validation.json"
+  ],
+  "finalIntegration": "pass"
+}

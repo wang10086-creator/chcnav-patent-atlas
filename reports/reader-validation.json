@@ -1,0 +1,318 @@
+{
+  "checks": [
+    {
+      "product": "gnss",
+      "form": "method",
+      "paths": 12,
+      "subpaths": 45,
+      "applications": 232
+    },
+    {
+      "product": "gnss",
+      "form": "structure",
+      "paths": 14,
+      "subpaths": 49,
+      "applications": 232
+    },
+    {
+      "product": "gnss",
+      "form": "design",
+      "paths": 1,
+      "subpaths": 3,
+      "applications": 232
+    },
+    {
+      "product": "survey",
+      "form": "method",
+      "paths": 6,
+      "subpaths": 15,
+      "applications": 90
+    },
+    {
+      "product": "survey",
+      "form": "structure",
+      "paths": 9,
+      "subpaths": 20,
+      "applications": 90
+    },
+    {
+      "product": "survey",
+      "form": "design",
+      "paths": 3,
+      "subpaths": 5,
+      "applications": 90
+    },
+    {
+      "product": "agriculture",
+      "form": "method",
+      "paths": 7,
+      "subpaths": 16,
+      "applications": 61
+    },
+    {
+      "product": "agriculture",
+      "form": "structure",
+      "paths": 9,
+      "subpaths": 17,
+      "applications": 61
+    },
+    {
+      "product": "agriculture",
+      "form": "design",
+      "paths": 3,
+      "subpaths": 4,
+      "applications": 61
+    },
+    {
+      "product": "engineering",
+      "form": "method",
+      "paths": 7,
+      "subpaths": 9,
+      "applications": 23
+    },
+    {
+      "product": "engineering",
+      "form": "structure",
+      "paths": 8,
+      "subpaths": 10,
+      "applications": 23
+    },
+    {
+      "product": "engineering",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 2,
+      "applications": 23
+    },
+    {
+      "product": "marine",
+      "form": "method",
+      "paths": 6,
+      "subpaths": 7,
+      "applications": 57
+    },
+    {
+      "product": "marine",
+      "form": "structure",
+      "paths": 10,
+      "subpaths": 17,
+      "applications": 57
+    },
+    {
+      "product": "marine",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 4,
+      "applications": 57
+    },
+    {
+      "product": "monitoring",
+      "form": "method",
+      "paths": 7,
+      "subpaths": 13,
+      "applications": 75
+    },
+    {
+      "product": "monitoring",
+      "form": "structure",
+      "paths": 12,
+      "subpaths": 22,
+      "applications": 75
+    },
+    {
+      "product": "monitoring",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 4,
+      "applications": 75
+    },
+    {
+      "product": "drone",
+      "form": "method",
+      "paths": 5,
+      "subpaths": 5,
+      "applications": 34
+    },
+    {
+      "product": "drone",
+      "form": "structure",
+      "paths": 7,
+      "subpaths": 13,
+      "applications": 34
+    },
+    {
+      "product": "drone",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 3,
+      "applications": 34
+    },
+    {
+      "product": "fluid",
+      "form": "method",
+      "paths": 3,
+      "subpaths": 3,
+      "applications": 24
+    },
+    {
+      "product": "fluid",
+      "form": "structure",
+      "paths": 5,
+      "subpaths": 5,
+      "applications": 24
+    },
+    {
+      "product": "fluid",
+      "form": "design",
+      "paths": 3,
+      "subpaths": 3,
+      "applications": 24
+    },
+    {
+      "product": "communication",
+      "form": "method",
+      "paths": 5,
+      "subpaths": 6,
+      "applications": 32
+    },
+    {
+      "product": "communication",
+      "form": "structure",
+      "paths": 8,
+      "subpaths": 12,
+      "applications": 32
+    },
+    {
+      "product": "communication",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 3,
+      "applications": 32
+    },
+    {
+      "product": "power",
+      "form": "method",
+      "paths": 1,
+      "subpaths": 2,
+      "applications": 23
+    },
+    {
+      "product": "power",
+      "form": "structure",
+      "paths": 3,
+      "subpaths": 6,
+      "applications": 23
+    },
+    {
+      "product": "power",
+      "form": "design",
+      "paths": 1,
+      "subpaths": 1,
+      "applications": 23
+    },
+    {
+      "product": "mechanical",
+      "form": "method",
+      "paths": 2,
+      "subpaths": 2,
+      "applications": 42
+    },
+    {
+      "product": "mechanical",
+      "form": "structure",
+      "paths": 3,
+      "subpaths": 8,
+      "applications": 42
+    },
+    {
+      "product": "mechanical",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 2,
+      "applications": 42
+    },
+    {
+      "product": "computing",
+      "form": "method",
+      "paths": 8,
+      "subpaths": 19,
+      "applications": 41
+    },
+    {
+      "product": "computing",
+      "form": "structure",
+      "paths": 6,
+      "subpaths": 14,
+      "applications": 41
+    },
+    {
+      "product": "testing",
+      "form": "method",
+      "paths": 8,
+      "subpaths": 13,
+      "applications": 37
+    },
+    {
+      "product": "testing",
+      "form": "structure",
+      "paths": 5,
+      "subpaths": 5,
+      "applications": 37
+    },
+    {
+      "product": "terminal",
+      "form": "method",
+      "paths": 1,
+      "subpaths": 1,
+      "applications": 10
+    },
+    {
+      "product": "terminal",
+      "form": "structure",
+      "paths": 3,
+      "subpaths": 3,
+      "applications": 10
+    },
+    {
+      "product": "terminal",
+      "form": "design",
+      "paths": 1,
+      "subpaths": 1,
+      "applications": 10
+    },
+    {
+      "product": "industry",
+      "form": "method",
+      "paths": 6,
+      "subpaths": 7,
+      "applications": 20
+    },
+    {
+      "product": "industry",
+      "form": "structure",
+      "paths": 6,
+      "subpaths": 7,
+      "applications": 20
+    },
+    {
+      "product": "industry",
+      "form": "design",
+      "paths": 1,
+      "subpaths": 1,
+      "applications": 20
+    },
+    {
+      "product": "other",
+      "form": "design",
+      "paths": 2,
+      "subpaths": 3,
+      "applications": 6
+    }
+  ],
+  "problems": [],
+  "pageErrors": [],
+  "desktop": true,
+  "mobile": true,
+  "ipEvidence": true,
+  "search": true
+}

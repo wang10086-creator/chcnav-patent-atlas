@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>专利 PDF 原文阅读 · 华测导航专利画像</title>
+  <link rel="stylesheet" href="pdf-viewer.css">
+</head>
+<body>
+  <header class="pv-header">
+    <a id="pv-back" href="index.html#patents">← 返回专利画像</a>
+    <h1>专利 PDF 原文阅读</h1>
+    <p id="pv-document">正在核对文献标识…</p>
+  </header>
+  <main>
+    <section class="pv-controls" aria-label="PDF 页码与显示">
+      <button type="button" id="pv-prev" disabled>← 上一页</button>
+      <form id="pv-page-form">
+        <label for="pv-page">PDF 页码</label>
+        <input id="pv-page" name="page" type="number" min="1" step="1" inputmode="numeric" value="1" required aria-describedby="pv-total">
+        <span id="pv-total">/ —</span>
+        <button type="submit" id="pv-go" disabled>跳转</button>
+      </form>
+      <button type="button" id="pv-next" disabled>下一页 →</button>
+      <label class="pv-zoom-label" for="pv-zoom">显示
+        <select id="pv-zoom" disabled><option value="fit">适合宽度</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+      </label>
+    </section>
+    <p id="pv-status" class="pv-status" role="status" aria-live="polite"></p>
+    <section id="pv-message" class="pv-message" aria-label="读取提示" hidden></section>
+    <section class="pv-sheet" id="pv-sheet" aria-label="当前 PDF 页" hidden>
+      <canvas id="pv-canvas" aria-label="专利 PDF 原页"></canvas>
+      <img id="pv-fallback" alt="" hidden>
+    </section>
+    <section class="pv-source" aria-label="原文来源">
+      <a id="pv-source" target="_blank" rel="noopener" hidden>GitHub 原文件 ↗</a>
+      <a id="pv-download" target="_blank" rel="noopener" hidden>下载原始 PDF ↓</a>
+      <button type="button" id="pv-retry" hidden>重试读取 PDF</button>
+      <p id="pv-provenance"></p>
+      <p>本页按 PDF 文件实际页序定位；公开／授权文献分别保留。图文阅读不代表已经核验专利有效性或保护范围。</p>
+    </section>
+  </main>
+  <footer>PDF.js · Mozilla 与贡献者 · Apache-2.0 · <a href="vendor/pdfjs/SOURCE.json" target="_blank" rel="noopener">版本、来源与许可</a></footer>
+  <script type="module" src="pdf-viewer.js"></script>
+</body>
+</html>

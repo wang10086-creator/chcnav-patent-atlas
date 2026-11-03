@@ -1,0 +1,323 @@
+{
+  "startup": {
+    "docs": 938,
+    "design": {
+      "loaded": true,
+      "error": "",
+      "documentCount": 152
+    },
+    "height": 1393,
+    "width": 1440,
+    "viewport": 1440
+  },
+  "homeDesignImageRequests": 0,
+  "allDesignRender": {
+    "total": 152,
+    "failed": []
+  },
+  "pathOrdering": [
+    {
+      "product": "gnss",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 12
+    },
+    {
+      "product": "gnss",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 14
+    },
+    {
+      "product": "gnss",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 1
+    },
+    {
+      "product": "survey",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 6
+    },
+    {
+      "product": "survey",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 9
+    },
+    {
+      "product": "survey",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 3
+    },
+    {
+      "product": "agriculture",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 7
+    },
+    {
+      "product": "agriculture",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 9
+    },
+    {
+      "product": "agriculture",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 3
+    },
+    {
+      "product": "engineering",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 7
+    },
+    {
+      "product": "engineering",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 8
+    },
+    {
+      "product": "engineering",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "marine",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 6
+    },
+    {
+      "product": "marine",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 10
+    },
+    {
+      "product": "marine",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "monitoring",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 7
+    },
+    {
+      "product": "monitoring",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 12
+    },
+    {
+      "product": "monitoring",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "drone",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 5
+    },
+    {
+      "product": "drone",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 7
+    },
+    {
+      "product": "drone",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "fluid",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 3
+    },
+    {
+      "product": "fluid",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 5
+    },
+    {
+      "product": "fluid",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 3
+    },
+    {
+      "product": "communication",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 5
+    },
+    {
+      "product": "communication",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 8
+    },
+    {
+      "product": "communication",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "power",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 1
+    },
+    {
+      "product": "power",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 3
+    },
+    {
+      "product": "power",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 1
+    },
+    {
+      "product": "mechanical",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 2
+    },
+    {
+      "product": "mechanical",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 3
+    },
+    {
+      "product": "mechanical",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "computing",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 8
+    },
+    {
+      "product": "computing",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 6
+    },
+    {
+      "product": "computing",
+      "requestedForm": "design",
+      "actualForm": "method",
+      "paths": 8
+    },
+    {
+      "product": "testing",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 8
+    },
+    {
+      "product": "testing",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 5
+    },
+    {
+      "product": "testing",
+      "requestedForm": "design",
+      "actualForm": "method",
+      "paths": 8
+    },
+    {
+      "product": "terminal",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 1
+    },
+    {
+      "product": "terminal",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 3
+    },
+    {
+      "product": "terminal",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 1
+    },
+    {
+      "product": "industry",
+      "requestedForm": "method",
+      "actualForm": "method",
+      "paths": 6
+    },
+    {
+      "product": "industry",
+      "requestedForm": "structure",
+      "actualForm": "structure",
+      "paths": 6
+    },
+    {
+      "product": "industry",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 1
+    },
+    {
+      "product": "other",
+      "requestedForm": "method",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "other",
+      "requestedForm": "structure",
+      "actualForm": "design",
+      "paths": 2
+    },
+    {
+      "product": "other",
+      "requestedForm": "design",
+      "actualForm": "design",
+      "paths": 2
+    }
+  ],
+  "galleryBeforeZoom": {
+    "width": 230,
+    "natural": 230,
+    "parent": 380
+  },
+  "galleryAfterZoom": {
+    "width": 230,
+    "natural": 230,
+    "parent": 380,
+    "maxWidth": "none"
+  },
+  "stackedDialogs": true,
+  "monitorVisible": true,
+  "networkWrites": [],
+  "pageErrors": []
+}

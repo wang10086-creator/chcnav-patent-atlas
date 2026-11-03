@@ -1,0 +1,24 @@
+{
+  "isolatedRealPdfPage3": {
+    "width": 360,
+    "height": 510,
+    "nonwhite": 10624,
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  "mobilePdf200PercentNoOuterOverflow": true,
+  "manualImportTwoEventsOnePublication": {
+    "importedRows": 2,
+    "distinctPublications": 1,
+    "stateChanges": 0,
+    "firstStatusObservations": 1,
+    "legalEvents": 2,
+    "anomalies": 0
+  },
+  "loginExpiredShowsException": true,
+  "blockedRawPdfUsesMatchingPage3Fallback": true,
+  "unknownPublicationRejectedWithoutRemoteFetch": true,
+  "pageErrors": [],
+  "missingResources": [],
+  "networkWrites": []
+}

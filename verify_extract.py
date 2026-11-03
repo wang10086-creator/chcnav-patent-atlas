@@ -28,7 +28,7 @@ assert actual==set(overrides), 'Override inventory differs from manifest'
 for name,digest in overrides.items():
  p=pathlib.PurePosixPath(name)
  assert not p.is_absolute() and '..' not in p.parts and '\\' not in name
- assert p.suffix.lower() in {'.html','.js','.css','.json'},name
+ assert p.suffix.lower() in {'.html','.js','.mjs','.css','.json','.csv','.webp','.png','.jpg','.jpeg','.svg','.wasm','.bcmap','.ttf','.pfb','.icc','.woff','.woff2','.txt'},name
  src=override_root.joinpath(*p.parts)
  assert not src.is_symlink() and not any(parent.is_symlink() for parent in src.parents)
  data=src.read_bytes()
@@ -36,4 +36,10 @@ for name,digest in overrides.items():
  dst=root.joinpath(*p.parts); dst.parent.mkdir(parents=True,exist_ok=True); dst.write_bytes(data)
 print(f'Applied {len(overrides)} reviewed static overrides, SHA-256 matched')
 import runpy
-runpy.run_path('scripts/check_pdf_links.py',run_name='__main__')
+for checker in ('scripts/check_pdf_links.py','scripts/check_design_manifest.py','scripts/check_preservation_upgrade.py'):
+ if pathlib.Path(checker).is_file():
+  try:
+   runpy.run_path(checker,run_name='__main__')
+  except SystemExit as result:
+   if result.code not in (None,0):
+    raise

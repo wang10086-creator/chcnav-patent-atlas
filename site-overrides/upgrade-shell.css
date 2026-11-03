@@ -1,0 +1,13 @@
+/* Shared shell additions; original atlas.css remains preserved. */
+.site-header { background:#fff; }
+.site-header nav { display:flex; flex-wrap:wrap; gap:18px; }
+.site-header nav a { white-space:nowrap; }
+.site-header .mode { white-space:nowrap; }
+.pdf-links { line-height:1.8; }
+@media(max-width:720px) {
+  .site-header { flex-wrap:wrap; gap:10px; }
+  .site-header nav { order:3; flex-basis:100%; gap:0; justify-content:space-between; }
+  .site-header nav a { padding:4px 0; font-size:12px; }
+  .site-header .brand { flex:1; }
+  .site-header .mode { display:none; }
+}
