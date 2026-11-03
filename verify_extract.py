@@ -19,3 +19,21 @@ for n in range(1,6):
 assert seen==set(manifest)
 assert (root/'index.html').is_file() and (root/'.nojekyll').is_file()
 print(f'Validated {len(seen)} static files, SHA-256 matched; source v19 2f88ed4a688eb0c9b5bf028c35fb520a6c1db2d9')
+
+# Preserve and verify the original public artifact before applying reviewed edits.
+override_root=pathlib.Path('site-overrides')
+overrides=json.loads(pathlib.Path('site-overrides-manifest.json').read_text())
+actual={p.relative_to(override_root).as_posix() for p in override_root.rglob('*') if p.is_file()}
+assert actual==set(overrides), 'Override inventory differs from manifest'
+for name,digest in overrides.items():
+ p=pathlib.PurePosixPath(name)
+ assert not p.is_absolute() and '..' not in p.parts and '\\' not in name
+ assert p.suffix.lower() in {'.html','.js','.css','.json'},name
+ src=override_root.joinpath(*p.parts)
+ assert not src.is_symlink() and not any(parent.is_symlink() for parent in src.parents)
+ data=src.read_bytes()
+ assert hashlib.sha256(data).hexdigest()==digest,name
+ dst=root.joinpath(*p.parts); dst.parent.mkdir(parents=True,exist_ok=True); dst.write_bytes(data)
+print(f'Applied {len(overrides)} reviewed static overrides, SHA-256 matched')
+import runpy
+runpy.run_path('scripts/check_pdf_links.py',run_name='__main__')
