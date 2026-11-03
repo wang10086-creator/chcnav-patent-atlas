@@ -1,0 +1,345 @@
+{
+  "baseUrl": "http://127.0.0.1:8013/",
+  "checkedAt": "2026-11-03T11:05:48.848576+00:00",
+  "mode": "local-and-separated-pdf-fixtures",
+  "status": "pass",
+  "mutatingNetworkRequests": [],
+  "pageErrors": [],
+  "mainHttpStatus": 200,
+  "monitorIsolation": {
+    "noNavigation": true,
+    "noGlobals": true,
+    "noScripts": true,
+    "noControls": true,
+    "noMonitorTitle": true
+  },
+  "paths": {
+    "productCount": 16,
+    "checks": [
+      {
+        "product": "gnss",
+        "form": "method",
+        "paths": 12,
+        "subpaths": 45
+      },
+      {
+        "product": "gnss",
+        "form": "structure",
+        "paths": 14,
+        "subpaths": 49
+      },
+      {
+        "product": "gnss",
+        "form": "design",
+        "paths": 1,
+        "subpaths": 3
+      },
+      {
+        "product": "survey",
+        "form": "method",
+        "paths": 6,
+        "subpaths": 15
+      },
+      {
+        "product": "survey",
+        "form": "structure",
+        "paths": 9,
+        "subpaths": 20
+      },
+      {
+        "product": "survey",
+        "form": "design",
+        "paths": 3,
+        "subpaths": 5
+      },
+      {
+        "product": "agriculture",
+        "form": "method",
+        "paths": 7,
+        "subpaths": 16
+      },
+      {
+        "product": "agriculture",
+        "form": "structure",
+        "paths": 9,
+        "subpaths": 17
+      },
+      {
+        "product": "agriculture",
+        "form": "design",
+        "paths": 3,
+        "subpaths": 4
+      },
+      {
+        "product": "engineering",
+        "form": "method",
+        "paths": 7,
+        "subpaths": 9
+      },
+      {
+        "product": "engineering",
+        "form": "structure",
+        "paths": 8,
+        "subpaths": 10
+      },
+      {
+        "product": "engineering",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 2
+      },
+      {
+        "product": "marine",
+        "form": "method",
+        "paths": 6,
+        "subpaths": 7
+      },
+      {
+        "product": "marine",
+        "form": "structure",
+        "paths": 10,
+        "subpaths": 17
+      },
+      {
+        "product": "marine",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 4
+      },
+      {
+        "product": "monitoring",
+        "form": "method",
+        "paths": 7,
+        "subpaths": 13
+      },
+      {
+        "product": "monitoring",
+        "form": "structure",
+        "paths": 12,
+        "subpaths": 22
+      },
+      {
+        "product": "monitoring",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 4
+      },
+      {
+        "product": "drone",
+        "form": "method",
+        "paths": 5,
+        "subpaths": 5
+      },
+      {
+        "product": "drone",
+        "form": "structure",
+        "paths": 7,
+        "subpaths": 13
+      },
+      {
+        "product": "drone",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 3
+      },
+      {
+        "product": "fluid",
+        "form": "method",
+        "paths": 3,
+        "subpaths": 3
+      },
+      {
+        "product": "fluid",
+        "form": "structure",
+        "paths": 5,
+        "subpaths": 5
+      },
+      {
+        "product": "fluid",
+        "form": "design",
+        "paths": 3,
+        "subpaths": 3
+      },
+      {
+        "product": "communication",
+        "form": "method",
+        "paths": 5,
+        "subpaths": 6
+      },
+      {
+        "product": "communication",
+        "form": "structure",
+        "paths": 8,
+        "subpaths": 12
+      },
+      {
+        "product": "communication",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 3
+      },
+      {
+        "product": "power",
+        "form": "method",
+        "paths": 1,
+        "subpaths": 2
+      },
+      {
+        "product": "power",
+        "form": "structure",
+        "paths": 3,
+        "subpaths": 6
+      },
+      {
+        "product": "power",
+        "form": "design",
+        "paths": 1,
+        "subpaths": 1
+      },
+      {
+        "product": "mechanical",
+        "form": "method",
+        "paths": 2,
+        "subpaths": 2
+      },
+      {
+        "product": "mechanical",
+        "form": "structure",
+        "paths": 3,
+        "subpaths": 8
+      },
+      {
+        "product": "mechanical",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 2
+      },
+      {
+        "product": "computing",
+        "form": "method",
+        "paths": 8,
+        "subpaths": 19
+      },
+      {
+        "product": "computing",
+        "form": "structure",
+        "paths": 6,
+        "subpaths": 14
+      },
+      {
+        "product": "testing",
+        "form": "method",
+        "paths": 8,
+        "subpaths": 13
+      },
+      {
+        "product": "testing",
+        "form": "structure",
+        "paths": 5,
+        "subpaths": 5
+      },
+      {
+        "product": "terminal",
+        "form": "method",
+        "paths": 1,
+        "subpaths": 1
+      },
+      {
+        "product": "terminal",
+        "form": "structure",
+        "paths": 3,
+        "subpaths": 3
+      },
+      {
+        "product": "terminal",
+        "form": "design",
+        "paths": 1,
+        "subpaths": 1
+      },
+      {
+        "product": "industry",
+        "form": "method",
+        "paths": 6,
+        "subpaths": 7
+      },
+      {
+        "product": "industry",
+        "form": "structure",
+        "paths": 6,
+        "subpaths": 7
+      },
+      {
+        "product": "industry",
+        "form": "design",
+        "paths": 1,
+        "subpaths": 1
+      },
+      {
+        "product": "other",
+        "form": "design",
+        "paths": 2,
+        "subpaths": 3
+      }
+    ],
+    "problems": [],
+    "desktop": true,
+    "mobile390NoOverflow": true,
+    "rdIpToggle": true,
+    "independentEvidence": true,
+    "oneExpandedPath": true,
+    "singleDetail": true,
+    "search": true,
+    "mobileDirectorySwitch": true
+  },
+  "gallery": {
+    "publication": "CN308935268S",
+    "multiPage": true,
+    "lazyThumbnails": true,
+    "defaultCompact": true,
+    "magnify": true,
+    "nextPreviousAndKeyboard": true,
+    "originalSizeToggle": true,
+    "sourceVersionLink": true,
+    "pdfPageLink": "pdf-viewer.html?id=CN308935268S&page=2",
+    "wholeDrawingPagesAndSupport": true,
+    "mobile390NoOverflow": true
+  },
+  "monitorHashIsolation": {
+    "noNavigation": true,
+    "noGlobals": true,
+    "noScripts": true,
+    "noControls": true,
+    "noMonitorTitle": true
+  },
+  "unpublishedPaths": {
+    "patent-monitor.js": 404,
+    "patent-monitor.css": 404,
+    "patent-monitor-core.js": 404,
+    "monitor-xlsx.js": 404,
+    "data/monitor-config.json": 404,
+    "admin-ui/index.html": 404,
+    "scripts/manual_monitor_admin.py": 404
+  },
+  "pdf": {
+    "isolatedCommittedPdf": {
+      "sha256Matched": true,
+      "page3Then4": true,
+      "canvasRendered": true,
+      "mobileNoOverflow": true,
+      "networkIntercepted": true
+    },
+    "isolatedNetworkFailure": {
+      "exactSavedPage": true,
+      "explicitFailureNotice": true,
+      "mobileNoOverflow": true,
+      "networkIntercepted": true
+    },
+    "actualNetwork": {
+      "status": "CN308935268S · 第 3 / 4 页 · 已保存的原页渲染图",
+      "message": "PDF 原文件当前无法读取或渲染，已展示对应页的原页渲染图。\n原因：原始 PDF 网络请求失败（可能是网络或跨域访问受限）。当前图片不是本次实时 PDF 渲染；它对应同一公开号、同一 PDF 版本和校验值。可重试读取或使用下方原始文件入口。",
+      "canvasVisible": false,
+      "fallbackVisible": true,
+      "networkIntercepted": false
+    }
+  }
+}

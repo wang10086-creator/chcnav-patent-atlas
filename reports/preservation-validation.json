@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "counts": {
+    "documents": 938,
+    "applications": 807,
+    "designDocuments": 152,
+    "analyses": 807,
+    "primaryProducts": 16,
+    "paths": 21,
+    "subpaths": 109
+  },
+  "originalArtifactFiles": 989,
+  "immutableFilesPreserved": 987,
+  "originalImages": 944,
+  "originalDesignAbstractImages": 152,
+  "originalCompleteDesignViewSets": 0,
+  "originalLocalAssetReferences": 954,
+  "missingOriginalLocalReferences": [],
+  "originalExternalEvidenceReferences": 988,
+  "originalExternalEvidenceReferenceSetSha256": "80726ceb016c695272256fa26c6462f466d435cff61ef4277dec938cc80492d4",
+  "pdfAssociations": 938,
+  "checkedPdfBytes": 938,
+  "designEvidence": {
+    "designDocuments": 152,
+    "identityVerified": 152,
+    "identityUnconfirmed": 0,
+    "pdfPages": 552,
+    "renderedPages": 552,
+    "drawingPages": 248,
+    "expectedViews": 1639,
+    "expectedCountKnownDocuments": 152,
+    "recognizedViewLabels": 1639,
+    "splitViewImages": 1639,
+    "viewCountsAgreeDocuments": 152,
+    "assetFiles": 4382,
+    "assetBytes": 53983268,
+    "reportedCompleteManualViewReviews": 0,
+    "countingNote": "PDF page coverage, cover-stated view count, extracted labels, and split images are separate measures; no automatic assertion of a completed manual design-scope review."
+  },
+  "staticSiteBytes": 146919983,
+  "capacityBudgetBytes": 1000000000,
+  "originalPresentationRetainedInZip": [
+    "atlas.js",
+    "index.html"
+  ],
+  "failures": []
+}

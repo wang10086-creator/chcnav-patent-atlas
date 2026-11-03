@@ -29,7 +29,8 @@ for d in portfolio:
     assert unquote(encoded) == r['path']
 baseline = json.loads((root / 'site-manifest.json').read_text())
 overrides = json.loads((root / 'site-overrides-manifest.json').read_text())
-assert set(overrides) == {'atlas.js', 'data/pdf-index.json'}
+assert {'atlas.js', 'data/pdf-index.json'} <= set(overrides)
+assert set(overrides) & set(baseline) <= {'index.html', 'atlas.js'}, 'Original evidence/data/style replacement is not allowed'
 for name, expected in baseline.items():
     if name not in overrides:
         assert hashlib.sha256((site / name).read_bytes()).hexdigest() == expected, name

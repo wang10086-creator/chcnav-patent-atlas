@@ -1,0 +1,42 @@
+{
+  "validatedAt": "2026-11-03T11:06:32.836305+00:00",
+  "status": "pass",
+  "baseCommit": "78917e7cd579eba335fc703b7f1e0c93ee954e25",
+  "releaseBranch": "codex/publish-gallery-routes",
+  "staticOverrides": 4601,
+  "staticSiteBytes": 146919983,
+  "counts": {
+    "documents": 938,
+    "applications": 807,
+    "designDocuments": 152,
+    "analyses": 807,
+    "primaryProducts": 16,
+    "paths": 21,
+    "subpaths": 109
+  },
+  "pdfAssociations": 938,
+  "pdfBytesChecked": 938,
+  "originalImages": 944,
+  "designPdfPages": 552,
+  "namedViews": 1639,
+  "newWebpAssets": 4382,
+  "unchangedProtectedFiles": [
+    "site-manifest.json",
+    ".github/workflows/pages.yml",
+    "site-overrides/data/pdf-index.json",
+    "site-part-01.zip",
+    "site-part-02.zip",
+    "site-part-03.zip",
+    "site-part-04.zip",
+    "site-part-05.zip"
+  ],
+  "monitoringPublished": false,
+  "administratorWorkbenchPublished": false,
+  "workflowChanged": false,
+  "cleanBuildPassed": true,
+  "browserReport": "reports/release-browser-validation.json",
+  "sourceOverrideManifestSha256": "b4976d6b150cae7af0174251908cdc585ea88fd9bc2b2de2dc9e38c36c30aa12",
+  "scopeCheck": "scripts/check_release_scope.py",
+  "manualDesignScopeVerificationComplete": false,
+  "productionNetworkAcceptance": "not attempted before deployment; CI and public-browser acceptance are separate"
+}

@@ -1,0 +1,3 @@
+# Incopat/audit CSV uses standard CRLF; vendored upstream bytes retain their SHA.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+site-overrides/vendor/** -whitespace

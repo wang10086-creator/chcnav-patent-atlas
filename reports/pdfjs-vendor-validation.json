@@ -1,0 +1,23 @@
+{
+  "version": "6.5.438",
+  "vendoredTotalBytes": 6561304,
+  "upstreamFileCount": 206,
+  "allFileHashesVerified": true,
+  "parserWorkerVersionMatched": true,
+  "licenseFilesRenamedWithUnchangedContent": 13,
+  "realPDFSmokeTest": {
+    "publication": "CN308935268S",
+    "documentPages": 4,
+    "renderedPage": 3,
+    "canvasWidth": 773,
+    "canvasHeight": 1094,
+    "nonwhitePixels": 37160,
+    "engine": "Chromium",
+    "pdfjsVersion": "6.5.438"
+  },
+  "officialSources": [
+    "https://mozilla.github.io/pdf.js/examples/",
+    "https://mozilla.github.io/pdf.js/api/draft/module-pdfjsLib.html",
+    "https://registry.npmjs.org/pdfjs-dist/6.5.438"
+  ]
+}
