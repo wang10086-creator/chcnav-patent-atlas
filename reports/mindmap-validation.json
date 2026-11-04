@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "product": "gnss",
+      "paths": 13
+    },
+    {
+      "product": "survey",
+      "paths": 15
+    },
+    {
+      "product": "agriculture",
+      "paths": 15
+    },
+    {
+      "product": "engineering",
+      "paths": 14
+    },
+    {
+      "product": "marine",
+      "paths": 14
+    },
+    {
+      "product": "monitoring",
+      "paths": 14
+    },
+    {
+      "product": "drone",
+      "paths": 13
+    },
+    {
+      "product": "fluid",
+      "paths": 11
+    },
+    {
+      "product": "communication",
+      "paths": 13
+    },
+    {
+      "product": "power",
+      "paths": 5
+    },
+    {
+      "product": "mechanical",
+      "paths": 7
+    },
+    {
+      "product": "computing",
+      "paths": 12
+    },
+    {
+      "product": "testing",
+      "paths": 11
+    },
+    {
+      "product": "terminal",
+      "paths": 5
+    },
+    {
+      "product": "industry",
+      "paths": 13
+    },
+    {
+      "product": "other",
+      "paths": 2
+    }
+  ],
+  "desktop": true,
+  "mobile": true,
+  "secondaryWindow": true,
+  "escapeCloses": true,
+  "originalInlineDetailsRemoved": true,
+  "pageErrors": []
+}
