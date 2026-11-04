@@ -1,0 +1,72 @@
+{
+  "screens": [
+    {
+      "name": "wide",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "map": {
+        "x": 277,
+        "y": 285.78125,
+        "width": 1378,
+        "height": 820
+      }
+    },
+    {
+      "name": "desktop",
+      "viewport": [
+        1440,
+        900
+      ],
+      "map": {
+        "x": 277,
+        "y": 285.78125,
+        "width": 1132,
+        "height": 620
+      }
+    },
+    {
+      "name": "laptop",
+      "viewport": [
+        1366,
+        768
+      ],
+      "map": {
+        "x": 277,
+        "y": 285.78125,
+        "width": 1058,
+        "height": 488
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": [
+        820,
+        1180
+      ],
+      "map": {
+        "x": 31,
+        "y": 277.78125,
+        "width": 758,
+        "height": 900
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "map": {
+        "x": 19,
+        "y": 403.28125,
+        "width": 352,
+        "height": 479
+      }
+    }
+  ],
+  "enterpriseIsolation": "test-only separate bundle: 1 record vs 938; full navigation resets search, nodes and details",
+  "status": "pass",
+  "pageErrors": []
+}
