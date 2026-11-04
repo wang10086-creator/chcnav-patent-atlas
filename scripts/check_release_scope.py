@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = {
     'atlas.js', 'index.html', 'reader-upgrade.css', 'upgrade-shell.css',
     'design-views.js', 'design-views.css', 'data/design-views.json',
-    'data/design-views-audit.csv', 'data/pdf-index.json',
+    'data/design-views-audit.csv', 'data/pdf-index.json', 'data/incopat-status-snapshot.json',
     'pdf-viewer.html', 'pdf-viewer.js', 'pdf-viewer.css',
 }
 PREFIXES = ('assets/design-views/', 'vendor/pdfjs/')
