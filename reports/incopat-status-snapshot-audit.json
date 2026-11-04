@@ -1,0 +1,32 @@
+{
+  "source": "IncoPat",
+  "snapshotDate": "2026-11-03",
+  "mappingSha256": "faccd8054418d12a100ae992ee775f3bd46a414c3690b8150295698d4256dfbf",
+  "documents": 938,
+  "applications": 807,
+  "matchedBaselinePublications": 938,
+  "matchedBaselineApplicationNumbers": 938,
+  "duplicatePublicationIds": 0,
+  "missingBaselinePublications": 0,
+  "newPublications": 0,
+  "applicationStatusConflicts": 0,
+  "documentValidity": {
+    "有效": 491,
+    "失效": 340,
+    "审中": 107
+  },
+  "applicationValidity": {
+    "有效": 360,
+    "失效": 340,
+    "审中": 107
+  },
+  "recordAllowedFields": [
+    "applicationNumber",
+    "jurisdiction",
+    "publicationId",
+    "statusRaw",
+    "validityRaw"
+  ],
+  "excluded": "Raw workbook, legal history text, rights holders, private file references and account data are not included.",
+  "officialVerified": false
+}

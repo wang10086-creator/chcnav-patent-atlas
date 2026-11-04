@@ -1,0 +1,42 @@
+{
+  "validity": {
+    "source-active": {
+      "documents": 491,
+      "applications": 360
+    },
+    "source-inactive": {
+      "documents": 340,
+      "applications": 340
+    },
+    "source-pending": {
+      "documents": 107,
+      "applications": 107
+    },
+    "unverified": {
+      "documents": 0,
+      "applications": 0
+    }
+  },
+  "versions": {
+    "documents": 938,
+    "applications": 807,
+    "officialVerified": 0
+  },
+  "status": "pass",
+  "sourceStatus": {
+    "授权": 491,
+    "未缴年费": 112,
+    "驳回": 213,
+    "实质审查": 104,
+    "撤回": 6,
+    "全部无效": 3,
+    "期限届满": 4,
+    "公开": 3,
+    "避重放弃": 2
+  },
+  "combinedPublishedActive": 137,
+  "missingAndConflictFailClosed": true,
+  "historicalSourcesSeparated": true,
+  "privacyWhitelistRejected": true,
+  "pageErrors": []
+}

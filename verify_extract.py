@@ -36,7 +36,7 @@ for name,digest in overrides.items():
  dst=root.joinpath(*p.parts); dst.parent.mkdir(parents=True,exist_ok=True); dst.write_bytes(data)
 print(f'Applied {len(overrides)} reviewed static overrides, SHA-256 matched')
 import runpy
-for checker in ('scripts/check_pdf_links.py','scripts/check_design_manifest.py','scripts/check_preservation_upgrade.py','scripts/check_release_scope.py'):
+for checker in ('scripts/check_pdf_links.py','scripts/check_design_manifest.py','scripts/check_preservation_upgrade.py','scripts/check_release_scope.py','scripts/check_status_snapshot.py'):
  try:
   runpy.run_path(checker,run_name='__main__')
  except SystemExit as result:

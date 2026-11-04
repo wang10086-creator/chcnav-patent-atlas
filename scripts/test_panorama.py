@@ -47,7 +47,7 @@ try:
   page.locator('[data-pm-home]').click();assert page.locator('#current-product').input_value()==''
   page.locator('#law-stage').select_option('published');assert page.evaluate('currentFiltered().length')==463
   page.locator('#law-region').select_option('CN');assert page.evaluate('currentFiltered().length')==463
-  page.locator('#law-status').select_option('active');assert page.evaluate('currentFiltered().length')==0
+  page.locator('#law-status').select_option('unverified');assert page.evaluate('currentFiltered().length')==0
   page.locator('#current-clear').click();assert page.evaluate('currentFiltered().length')==938
   report['legal']=page.evaluate('''()=>{const wo=patentLaw({id:'WO2026000001A1',country:'中国'}),ep=patentLaw({id:'EP1234567B1'}),bad=patentLaw({id:'CN123A',country:'美国'}),missing=patentLaw({id:''});if(wo.verifiedActiveRegions.length||ep.verifiedActiveRegions.length||wo.verifiedAt||missing.verifiedAt)throw Error('false verification');if(bad.regionCode!=='unknown')throw Error('conflict');return {records:currentDocs.length,verified:currentDocs.filter(d=>patentLaw(d).verifiedAt).length,WO:wo.region,EP:ep.region,conflict:bad.region};}''')
   # Actual background drag and native fullscreen.
