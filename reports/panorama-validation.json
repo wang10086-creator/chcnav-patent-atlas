@@ -1,0 +1,138 @@
+{
+  "overview": {
+    "productIds": [
+      "gnss",
+      "survey",
+      "agriculture",
+      "fluid",
+      "engineering",
+      "marine",
+      "drone",
+      "monitoring",
+      "industry",
+      "communication",
+      "power",
+      "mechanical",
+      "computing",
+      "testing",
+      "terminal",
+      "other"
+    ],
+    "unique": 16,
+    "documents": 938,
+    "applications": 807
+  },
+  "levels": [
+    {
+      "product": "gnss",
+      "paths": 27,
+      "topics": 97,
+      "leafOccurrences": 385
+    },
+    {
+      "product": "survey",
+      "paths": 18,
+      "topics": 40,
+      "leafOccurrences": 142
+    },
+    {
+      "product": "agriculture",
+      "paths": 19,
+      "topics": 37,
+      "leafOccurrences": 117
+    },
+    {
+      "product": "engineering",
+      "paths": 17,
+      "topics": 21,
+      "leafOccurrences": 36
+    },
+    {
+      "product": "marine",
+      "paths": 18,
+      "topics": 28,
+      "leafOccurrences": 73
+    },
+    {
+      "product": "monitoring",
+      "paths": 21,
+      "topics": 39,
+      "leafOccurrences": 120
+    },
+    {
+      "product": "drone",
+      "paths": 14,
+      "topics": 21,
+      "leafOccurrences": 39
+    },
+    {
+      "product": "fluid",
+      "paths": 11,
+      "topics": 11,
+      "leafOccurrences": 28
+    },
+    {
+      "product": "communication",
+      "paths": 15,
+      "topics": 21,
+      "leafOccurrences": 39
+    },
+    {
+      "product": "power",
+      "paths": 5,
+      "topics": 9,
+      "leafOccurrences": 29
+    },
+    {
+      "product": "mechanical",
+      "paths": 7,
+      "topics": 12,
+      "leafOccurrences": 47
+    },
+    {
+      "product": "computing",
+      "paths": 14,
+      "topics": 33,
+      "leafOccurrences": 66
+    },
+    {
+      "product": "testing",
+      "paths": 13,
+      "topics": 18,
+      "leafOccurrences": 67
+    },
+    {
+      "product": "terminal",
+      "paths": 5,
+      "topics": 5,
+      "leafOccurrences": 11
+    },
+    {
+      "product": "industry",
+      "paths": 13,
+      "topics": 15,
+      "leafOccurrences": 26
+    },
+    {
+      "product": "other",
+      "paths": 2,
+      "topics": 3,
+      "leafOccurrences": 6
+    }
+  ],
+  "legal": {
+    "records": 938,
+    "verified": 0,
+    "WO": "PCT国际公布（非授权地域）",
+    "EP": "欧洲专利局程序（非全欧洲有效）",
+    "conflict": "地域冲突待核实"
+  },
+  "dragAndFullscreen": true,
+  "status": "pass",
+  "nodePaginationComplete": true,
+  "returnZoomPreserved": true,
+  "productSelectorRootSynchronized": true,
+  "sameRecordFilters": true,
+  "mobileNoOverflow": true,
+  "pageErrors": []
+}
