@@ -1,0 +1,22 @@
+{
+  "before1440": {
+    "width": 1094,
+    "top": 542,
+    "visibleHeight": 358
+  },
+  "before1920": {
+    "width": 1094,
+    "top": 542,
+    "visibleHeight": 538
+  },
+  "after1440": {
+    "width": 1132,
+    "top": 286,
+    "visibleHeight": 614
+  },
+  "after1920": {
+    "width": 1378,
+    "top": 286,
+    "visibleHeight": 794
+  }
+}
