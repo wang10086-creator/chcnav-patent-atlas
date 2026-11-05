@@ -12,4 +12,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: python3 verify_extract.py
+      - run: python3 scripts/check_primary_coverage.py
       - run: python3 maintenance/test_updates.py
