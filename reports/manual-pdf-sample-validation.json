@@ -1,0 +1,23 @@
+[
+  {
+    "publicationId": "CN117440338A",
+    "type": "发明申请",
+    "shaMatchesIndex": true,
+    "pages": 24,
+    "firstPageContainsExactId": true
+  },
+  {
+    "publicationId": "CN220948494U",
+    "type": "实用新型",
+    "shaMatchesIndex": true,
+    "pages": 9,
+    "firstPageContainsExactId": true
+  },
+  {
+    "publicationId": "CN308935268S",
+    "type": "外观设计",
+    "shaMatchesIndex": true,
+    "pages": 4,
+    "firstPageContainsExactId": true
+  }
+]

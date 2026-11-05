@@ -62,10 +62,11 @@ try:
    if path=='index.html':
     html=f.read_text().replace('src="atlas.js"','src="/atlas.js"')
     route.fulfill(body=html,content_type='text/html');return
-   if path in ['data/portfolio-current.json','data/full-analysis.json']:
+   if path in ['data/portfolio-current.json','data/full-analysis.json','data/product-portraits.json']:
     data=json.loads(f.read_text());target=json.loads((ROOT/'_site/data/full-analysis.json').read_text())['records'][0]
     if isinstance(data,list):data=[d for d in data if d['id']==target['id']]
-    else:data['records']=[target]
+    elif path=='data/full-analysis.json':data['records']=[target]
+    else:data['mappings']=[m for m in data['mappings'] if m['applicationNumber']==target['applicationNumber']]
     route.fulfill(body=json.dumps(data),content_type='application/json');return
    if f.exists():route.fulfill(path=str(f))
    else:route.fulfill(status=404,body='missing fixture')
