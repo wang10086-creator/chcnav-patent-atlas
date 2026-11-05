@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "baselineDocuments": 938,
+  "baselineApplications": 807,
+  "baselinePdfMatches": 938,
+  "baselineMissingPdf": [],
+  "productionManualEvents": 0,
+  "unitTests": 8,
+  "browserSuites": [
+    "test_manual_browser.py",
+    "test_panorama.py",
+    "test_status_snapshot.py",
+    "test_workspace.py"
+  ],
+  "sourceLookupAttempt": {
+    "source": "Google Patents",
+    "result": "访问受限",
+    "reason": "Execution proxy returned 403; no bypass attempted"
+  },
+  "designSample": {
+    "publicationId": "CN308935268S",
+    "pdfPages": 4,
+    "preservedRenderedPages": 4,
+    "preservedNamedViews": 16,
+    "newHumanViewLabelReview": false
+  },
+  "notVerified": [
+    "Live successful third-party PDF discovery in this environment",
+    "All-country official API coverage",
+    "Production deployment of this feature (not authorized yet)"
+  ]
+}

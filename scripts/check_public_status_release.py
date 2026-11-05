@@ -7,7 +7,7 @@ def verify(url,expected_dir,attempts=12,delay=10,fetch=None):
  if (parsed.scheme,parsed.netloc,parsed.path.rstrip('/'))!=('https','wang10086-creator.github.io','/chcnav-patent-atlas'):
   raise ValueError('Unexpected deployment URL')
  expected_dir=Path(expected_dir)
- files=['index.html','atlas.js','upgrade-shell.css','data/incopat-status-snapshot.json']
+ files=['data/manual-updates.json','maintenance.html','manual-editor.js','index.html','atlas.js','upgrade-shell.css','data/incopat-status-snapshot.json']
  expected={name:(expected_dir/name).read_bytes() for name in files}
  def download(address):
   request=urllib.request.Request(address,headers={'Cache-Control':'no-cache','User-Agent':'CHCNAV-release-verification'})
