@@ -1,0 +1,139 @@
+{
+  "deepGuidance": {
+    "publication": "CN104697526A",
+    "paths": 2,
+    "levels": [
+      "overview",
+      "product",
+      "path",
+      "topic"
+    ],
+    "nextReturnsToCommonAncestor": true
+  },
+  "paginationTarget": "CN106257426A",
+  "layouts": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scrollHeight": 1080,
+      "scrollWidth": 1920,
+      "map": {
+        "x": 267,
+        "y": 271.53125,
+        "width": 1176.40625,
+        "height": 733.328125,
+        "top": 271.53125,
+        "right": 1443.40625,
+        "bottom": 1004.859375,
+        "left": 267
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "scrollWidth": 1440,
+      "map": {
+        "x": 267,
+        "y": 271.53125,
+        "width": 806.8125,
+        "height": 553.328125,
+        "top": 271.53125,
+        "right": 1073.8125,
+        "bottom": 824.859375,
+        "left": 267
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 1366,
+      "map": {
+        "x": 267,
+        "y": 271.53125,
+        "width": 744,
+        "height": 421.328125,
+        "top": 271.53125,
+        "right": 1011,
+        "bottom": 692.859375,
+        "left": 267
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "scrollWidth": 1280,
+      "map": {
+        "x": 267,
+        "y": 271.53125,
+        "width": 658,
+        "height": 373.328125,
+        "top": 271.53125,
+        "right": 925,
+        "bottom": 644.859375,
+        "left": 267
+      }
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "scrollHeight": 1294,
+      "scrollWidth": 820,
+      "map": {
+        "x": 31,
+        "y": 295.578125,
+        "width": 758,
+        "height": 900,
+        "top": 295.578125,
+        "right": 789,
+        "bottom": 1195.578125,
+        "left": 31
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollHeight": 1079,
+      "scrollWidth": 390,
+      "map": {
+        "x": 19,
+        "y": 472.265625,
+        "width": 352,
+        "height": 479,
+        "top": 472.265625,
+        "right": 371,
+        "bottom": 951.265625,
+        "left": 19
+      }
+    },
+    {
+      "width": 683,
+      "height": 384,
+      "scrollHeight": 824,
+      "scrollWidth": 683,
+      "map": {
+        "x": 19,
+        "y": 403.765625,
+        "width": 645,
+        "height": 330,
+        "top": 403.765625,
+        "right": 664,
+        "bottom": 733.765625,
+        "left": 19
+      }
+    }
+  ],
+  "designEvidence": {
+    "publication": "CN308935268S",
+    "originalPages": 4,
+    "viewerImageLoaded": true
+  },
+  "status": "pass",
+  "noPageErrors": true,
+  "sourceDatesUnchanged": true,
+  "inlineDetailSwitchAndClear": true,
+  "explanationsPreserved": true,
+  "fullscreenDetails": true
+}
