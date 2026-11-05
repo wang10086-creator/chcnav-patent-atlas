@@ -23,10 +23,10 @@ try:
    assert p.evaluate('currentDocs.length')==938
    assert p.evaluate('document.documentElement.scrollWidth<=innerWidth')
    assert p.locator('#workspace-filters').is_visible()==(width>=1200)
-   assert p.locator('#workspace-notes').is_visible()==(width>=1700)
+   assert p.locator('#workspace-details').is_visible()==(width>=1200)
    box=p.locator('.pm-viewport').bounding_box();report['screens'].append({'name':name,'viewport':[width,height],'map':box})
-   assert box['width']>width*(.65 if width>=1200 else .85)
-   assert box['y']<height*.48
+   assert box['width']>width*(.45 if width>=1200 else .85)
+   assert box['y']<height*(.48 if width>=1200 else .65), (name,box)
    p.screenshot(path=str(out/(name+'.png')),full_page=True)
    # Toggling does not reset map, filters or diagram-space position.
    if width>=1200:

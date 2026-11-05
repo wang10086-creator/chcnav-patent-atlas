@@ -37,11 +37,11 @@ try:
    if not nxt.count() or nxt.is_disabled():break
    nxt.click()
   assert len(seen)==total
-  page.locator('[data-pm-patent]').first.click();assert page.locator('#patent-drawer').is_visible()
-  assert page.locator('#patent-drawer .law-panel').count()==1
-  assert '尚未核验' in page.locator('#patent-drawer .law-panel').inner_text()
-  page.locator('#patent-drawer .law-panel').screenshot(path=str(out/'legal-region-details.png'))
-  page.keyboard.press('Escape');assert page.evaluate('panorama.level')=='topic'
+  page.locator('[data-pm-patent]').first.click();assert page.locator('#workspace-details').is_visible()
+  assert page.locator('#workspace-details .law-panel').count()==1
+  assert '尚未核验' in page.locator('#workspace-details .law-panel').inner_text()
+  page.locator('#workspace-details .law-panel').screenshot(path=str(out/'legal-region-details.png'))
+  page.locator('[data-detail-clear]').click();assert page.evaluate('panorama.level')=='topic'
   page.locator('[data-pm-back]').click();assert page.locator('.pm-heading h2').inner_text()==pathTitle
   page.locator('[data-pm-back]').click();assert page.evaluate('panorama.level')=='product';assert page.locator('.pm-viewport').get_attribute('data-zoom')==zoom
   page.locator('[data-pm-home]').click();assert page.locator('#current-product').input_value()==''
@@ -66,12 +66,12 @@ try:
   page.wait_for_function('!document.fullscreenElement && !document.querySelector(".pm-expanded")')
   report['dragAndFullscreen']=True
   # Search and mobile use on real dense map.
-  page.locator('#pm-locate').fill('农机');page.locator('[data-pm-locate]').click();assert page.locator('.located').count()==1
+  page.locator('[data-pm-home]').click();page.locator('#pm-locate').fill('农机');page.locator('[data-pm-locate]').click();assert page.locator('.located').count()==1
   page.locator('#current-q').fill('CN104697526A');assert page.evaluate('currentFiltered().length')==1
   page.locator('#current-clear').click()
   page.set_viewport_size({'width':390,'height':844});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
   page.locator('#current-product').select_option('survey');page.locator('.pm-node.leaf button').first.click();page.locator('.pm-node.leaf button').first.click();assert page.evaluate('panorama.level')=='topic'
-  page.locator('[data-pm-patent]').first.click();assert page.locator('#patent-drawer .law-panel').is_visible();page.keyboard.press('Escape')
+  page.locator('[data-pm-patent]').first.click();assert page.locator('#workspace-details .law-panel').is_visible();page.locator('[data-detail-clear]').click()
   page.locator('.panorama-workspace').screenshot(path=str(out/'mobile-subpath.png'))
   assert not errors,errors
   report.update(status='pass',nodePaginationComplete=True,returnZoomPreserved=True,productSelectorRootSynchronized=True,sameRecordFilters=True,mobileNoOverflow=True,pageErrors=errors)
