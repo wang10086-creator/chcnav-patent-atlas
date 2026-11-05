@@ -1,0 +1,230 @@
+{
+  "status": "pass",
+  "documents": 938,
+  "applications": 807,
+  "categories": [
+    {
+      "id": "gnss",
+      "name": "卫星定位接收与导航系统",
+      "applications": 232,
+      "documents": 280
+    },
+    {
+      "id": "survey",
+      "name": "光学与三维测量系统",
+      "applications": 90,
+      "documents": 102
+    },
+    {
+      "id": "agriculture",
+      "name": "农机自动驾驶与作业系统",
+      "applications": 61,
+      "documents": 83
+    },
+    {
+      "id": "engineering",
+      "name": "工程机械控制与引导系统",
+      "applications": 23,
+      "documents": 24
+    },
+    {
+      "id": "marine",
+      "name": "无人船与水文探测系统",
+      "applications": 57,
+      "documents": 61
+    },
+    {
+      "id": "monitoring",
+      "name": "形变与环境监测系统",
+      "applications": 75,
+      "documents": 82
+    },
+    {
+      "id": "drone",
+      "name": "无人机飞行平台与专用部件",
+      "applications": 34,
+      "documents": 34
+    },
+    {
+      "id": "fluid",
+      "name": "灌溉与喷雾流体系统",
+      "applications": 24,
+      "documents": 24
+    },
+    {
+      "id": "communication",
+      "name": "天线与独立通信组件",
+      "applications": 32,
+      "documents": 34
+    },
+    {
+      "id": "power",
+      "name": "独立供电与电池组件",
+      "applications": 23,
+      "documents": 25
+    },
+    {
+      "id": "mechanical",
+      "name": "通用连接、防护与机械组件",
+      "applications": 42,
+      "documents": 45
+    },
+    {
+      "id": "computing",
+      "name": "通用嵌入式电子与软件组件",
+      "applications": 41,
+      "documents": 49
+    },
+    {
+      "id": "testing",
+      "name": "检测、标定与验证工具",
+      "applications": 37,
+      "documents": 58
+    },
+    {
+      "id": "terminal",
+      "name": "手簿、平板与通用交互终端",
+      "applications": 10,
+      "documents": 10
+    },
+    {
+      "id": "industry",
+      "name": "行业信息采集与管理系统",
+      "applications": 20,
+      "documents": 21
+    },
+    {
+      "id": "other",
+      "name": "其他独立产品／用途待明确",
+      "applications": 6,
+      "documents": 6
+    }
+  ],
+  "emptyFullLibraryCategories": [],
+  "issues": {
+    "duplicatePublications": [],
+    "duplicateCategoryIds": [],
+    "duplicateApplicationMappings": [],
+    "unmappedApplications": [],
+    "extraApplicationMappings": [],
+    "unknownCategoryMappings": [],
+    "analysisApplicationMismatch": []
+  },
+  "summedCategoryApplications": 807,
+  "summedCategoryDocuments": 938,
+  "reproduction": {
+    "filter": {
+      "sourceStatusRaw": "公开"
+    },
+    "documents": 3,
+    "applications": 3,
+    "categoryCounts": [
+      {
+        "id": "gnss",
+        "name": "卫星定位接收与导航系统",
+        "applications": 3,
+        "documents": 3
+      },
+      {
+        "id": "survey",
+        "name": "光学与三维测量系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "agriculture",
+        "name": "农机自动驾驶与作业系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "engineering",
+        "name": "工程机械控制与引导系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "marine",
+        "name": "无人船与水文探测系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "monitoring",
+        "name": "形变与环境监测系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "drone",
+        "name": "无人机飞行平台与专用部件",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "fluid",
+        "name": "灌溉与喷雾流体系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "communication",
+        "name": "天线与独立通信组件",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "power",
+        "name": "独立供电与电池组件",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "mechanical",
+        "name": "通用连接、防护与机械组件",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "computing",
+        "name": "通用嵌入式电子与软件组件",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "testing",
+        "name": "检测、标定与验证工具",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "terminal",
+        "name": "手簿、平板与通用交互终端",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "industry",
+        "name": "行业信息采集与管理系统",
+        "applications": 0,
+        "documents": 0
+      },
+      {
+        "id": "other",
+        "name": "其他独立产品／用途待明确",
+        "applications": 0,
+        "documents": 0
+      }
+    ],
+    "zeroCategoryCount": 15,
+    "interpretation": "This reproduces the screenshot totals, but the screenshot does not establish the actual active filters."
+  },
+  "sourceSha256": {
+    "portfolio-current.json": "a9e269d3bbbe7f4eacfac544621ec6398a3ceae9e9dfc1b83669977b2bee71ea",
+    "product-portraits.json": "c9e9d4bb8778471c4b19861330acc9ef0a891ddd59e59a2ab0ce8e8c82854f1b",
+    "full-analysis.json": "769865208a694aa97d7e6e1815b1da028d27025df3aabc0bcdae5c7783448fb4",
+    "route-tree.json": "1d07627289670444bf0e9f4d59c4367e5065fc3888b99956ea02b8a635365a86",
+    "incopat-status-snapshot.json": "faccd8054418d12a100ae992ee775f3bd46a414c3690b8150295698d4256dfbf"
+  },
+  "negativeAuditCases": "missing, duplicate and unknown category mappings detected in isolated copies"
+}

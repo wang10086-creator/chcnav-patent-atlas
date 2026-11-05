@@ -120,3 +120,18 @@ body .site-header{min-height:56px;padding:8px 18px;gap:12px 20px}
  .workspace-main .pm-locate label{width:100%}.pm-locate input{flex:1}
  .pm-locate-help{line-height:1.6}.node-detail-panel{scroll-margin-top:120px}
 }
+
+/* Keep empty product entries traceable instead of presenting a filtered zero as a full-library total. */
+.pm-filter-summary{display:flex;flex-wrap:nowrap;align-items:center;gap:3px 8px;margin:6px 0;padding:7px 9px;background:#fff8e9;border:1px solid #eadbb6;border-radius:8px;color:#735a2e;font-size:12px;line-height:1.5;flex:none;max-height:105px;overflow:auto}
+.pm-filter-summary .pm-filter-copy{flex:1;min-width:0;overflow-wrap:anywhere}.pm-filter-summary .pm-filter-total{display:block;font-size:11px;margin-top:3px}
+.pm-filter-summary button{padding:3px 8px;border:1px solid #d7c69e;border-radius:6px;background:white;color:#72552b;font-size:12px;margin-left:auto;flex:none}
+.pm-node .pm-count-context{font-size:11px;line-height:1.2;color:#657887;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.pm-node.empty-filtered-empty button{background:#f7f9fa;border:1px dashed #95a8b2;border-left:4px solid #95a8b2;color:#526975}
+.pm-node.empty-filtered-empty .pm-count-context{color:#816331}
+.pm-node.empty-unpopulated button{background:#f6f7f8;border:1px dashed #9ca4b1;color:#68717e}
+.pm-node.product-count-node button{gap:3px}.pm-node.product-count-node b{-webkit-line-clamp:2}
+.pm-node.product-count-node .guide-match b{-webkit-line-clamp:1}
+.pm-node.empty-filtered-empty button.guide-match,.pm-node.empty-unpopulated button.guide-match{border-color:#b12f37;background:#fff0ed;color:#7e2929}
+.category-coverage{margin:16px 0;padding:12px;background:#f8fafb;border:1px solid #dfe7ec;border-radius:10px}
+.category-coverage p{font-size:13px}.category-coverage button{white-space:normal}
+@media(max-width:720px){.pm-filter-summary{max-height:150px;font-size:12px}.pm-filter-summary .pm-filter-total{font-size:12px}}

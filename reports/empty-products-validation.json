@@ -1,0 +1,181 @@
+{
+  "layouts": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "mapHeight": 666
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "mapHeight": 486
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "scrollHeight": 768,
+      "mapHeight": 354
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "mapHeight": 306
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1158,
+      "mapHeight": 477
+    }
+  ],
+  "status": "pass",
+  "fullLibraryCategories": [
+    {
+      "id": "gnss",
+      "applications": 232,
+      "documents": 280,
+      "totalApplications": 232,
+      "totalDocuments": 280,
+      "reason": "matched"
+    },
+    {
+      "id": "survey",
+      "applications": 90,
+      "documents": 102,
+      "totalApplications": 90,
+      "totalDocuments": 102,
+      "reason": "matched"
+    },
+    {
+      "id": "agriculture",
+      "applications": 61,
+      "documents": 83,
+      "totalApplications": 61,
+      "totalDocuments": 83,
+      "reason": "matched"
+    },
+    {
+      "id": "engineering",
+      "applications": 23,
+      "documents": 24,
+      "totalApplications": 23,
+      "totalDocuments": 24,
+      "reason": "matched"
+    },
+    {
+      "id": "marine",
+      "applications": 57,
+      "documents": 61,
+      "totalApplications": 57,
+      "totalDocuments": 61,
+      "reason": "matched"
+    },
+    {
+      "id": "monitoring",
+      "applications": 75,
+      "documents": 82,
+      "totalApplications": 75,
+      "totalDocuments": 82,
+      "reason": "matched"
+    },
+    {
+      "id": "drone",
+      "applications": 34,
+      "documents": 34,
+      "totalApplications": 34,
+      "totalDocuments": 34,
+      "reason": "matched"
+    },
+    {
+      "id": "fluid",
+      "applications": 24,
+      "documents": 24,
+      "totalApplications": 24,
+      "totalDocuments": 24,
+      "reason": "matched"
+    },
+    {
+      "id": "communication",
+      "applications": 32,
+      "documents": 34,
+      "totalApplications": 32,
+      "totalDocuments": 34,
+      "reason": "matched"
+    },
+    {
+      "id": "power",
+      "applications": 23,
+      "documents": 25,
+      "totalApplications": 23,
+      "totalDocuments": 25,
+      "reason": "matched"
+    },
+    {
+      "id": "mechanical",
+      "applications": 42,
+      "documents": 45,
+      "totalApplications": 42,
+      "totalDocuments": 45,
+      "reason": "matched"
+    },
+    {
+      "id": "computing",
+      "applications": 41,
+      "documents": 49,
+      "totalApplications": 41,
+      "totalDocuments": 49,
+      "reason": "matched"
+    },
+    {
+      "id": "testing",
+      "applications": 37,
+      "documents": 58,
+      "totalApplications": 37,
+      "totalDocuments": 58,
+      "reason": "matched"
+    },
+    {
+      "id": "terminal",
+      "applications": 10,
+      "documents": 10,
+      "totalApplications": 10,
+      "totalDocuments": 10,
+      "reason": "matched"
+    },
+    {
+      "id": "industry",
+      "applications": 20,
+      "documents": 21,
+      "totalApplications": 20,
+      "totalDocuments": 21,
+      "reason": "matched"
+    },
+    {
+      "id": "other",
+      "applications": 6,
+      "documents": 6,
+      "totalApplications": 6,
+      "totalDocuments": 6,
+      "reason": "matched"
+    }
+  ],
+  "filterExample": {
+    "sourceStatusRaw": "公开",
+    "documents": 3,
+    "applications": 3,
+    "filteredEmptyCategories": 15
+  },
+  "filterResetRecovery": true,
+  "unpopulatedPresetDistinguished": true,
+  "zeroSearchAndCombination": true,
+  "originalDocumentsUnchanged": 938,
+  "pageErrors": []
+}
