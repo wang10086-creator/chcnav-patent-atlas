@@ -1,0 +1,90 @@
+{
+  "status": "pass",
+  "filterCases": [
+    {
+      "filters": {},
+      "documents": 938,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "product": "survey"
+      },
+      "documents": 102,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "status": "source-active"
+      },
+      "documents": 491,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "status": "source-pending",
+        "region": "CN"
+      },
+      "documents": 107,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "raw": "公开"
+      },
+      "documents": 3,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "raw": "未缴年费",
+        "stage": "grant-document"
+      },
+      "documents": 112,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "stage": "published",
+        "product": "gnss"
+      },
+      "documents": 149,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "since": "2026-11-01"
+      },
+      "documents": 0,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "type": "design"
+      },
+      "documents": 152,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "q": "CN110749912A"
+      },
+      "documents": 1,
+      "idsMatchPreviousRelease": true
+    },
+    {
+      "filters": {
+        "q": "不存在的专利_938xyz"
+      },
+      "documents": 0,
+      "idsMatchPreviousRelease": true
+    }
+  ],
+  "sourceNoticePreserved": true,
+  "enterpriseVisible": true,
+  "directPatentAndDetail": true,
+  "resizePreservesZoomAndPath": true,
+  "fullscreenDetails": true,
+  "mobileExpandedControls": true,
+  "pageErrors": []
+}
