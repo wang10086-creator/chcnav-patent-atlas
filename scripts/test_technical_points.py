@@ -24,7 +24,10 @@ try:
   p.screenshot(path=str(out/'technical-first-desktop.png'),full_page=True)
   p.locator('.legal-details-fold>summary').click();assert p.locator('.legal-details-fold .law-panel').is_visible();assert '2026-11-03' in p.locator('.legal-details-fold').inner_text();assert '未官方核验' in p.locator('.legal-details-fold').inner_text()
   # Every summary is copied from the same publication's saved analysis; no cross-version inference.
-  checks=p.evaluate('''()=>{let labeled=0,fallback=0;for(const d of currentDocs){const state={topic:'',form:''},v=patentNodePoint(d,state),a=currentAnalyses.find(a=>a.id===d.id);if(!a){if(v.title!==d.title)throw Error('borrowed version');fallback++;}else{if(v.title!==a.function&&v.title!==d.title)throw Error('invented label');labeled++;}}return {labeled,fallback,documents:currentDocs.length};}''')
+  checks=p.evaluate("""()=>{let analyzed=0,extracted=0;for(const d of currentDocs){const v=patentNodePoint(d),a=currentAnalyses.find(a=>a.id===d.id);if(!v.title||!v.description||v.sourceId!==d.id||v.basis==='待核实')throw Error('missing '+d.id);if(v.basis.includes('权项摘录')){const c=currentTexts[d.id].claims.find(c=>Number(c.number)===1)||currentTexts[d.id].claims[0];if(v.description!==c.text.replace(/\\s+/g,' ').trim())throw Error('wrong text');extracted++;}else analyzed++;}return {analyzed,extracted,documents:currentDocs.length};}""")
+  assert p.locator('.guide-target small').inner_text().startswith('CN104697526A · 用于农业机械')
+  assert p.locator('#node-detail-content .technical-point-evidence').count()==1
+
   p.locator('[data-pm-home]').click();p.locator('[data-pm-clear]').click();p.locator('#pm-locate').fill('用于农业机械的捷联惯导系统');assert p.evaluate('mapGuidance.matches.length')>0
   p.set_viewport_size({'width':390,'height':844});assert p.evaluate('document.documentElement.scrollWidth<=innerWidth')
   p.evaluate("openCurrentPatent('CN107490368B')");assert p.locator('.current-form-block').count()>0;assert not p.locator('.legal-details-fold').evaluate('(e)=>e.open');p.screenshot(path=str(out/'technical-first-mobile.png'))

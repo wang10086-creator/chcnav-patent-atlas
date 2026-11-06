@@ -1,7 +1,7 @@
 {
   "status": "pass",
-  "labeled": 807,
-  "fallback": 131,
+  "analyzed": 807,
+  "extracted": 131,
   "documents": 938,
   "originalTitleSearch": true,
   "lawCollapsedAndExpandable": true,

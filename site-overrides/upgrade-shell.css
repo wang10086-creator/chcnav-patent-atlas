@@ -138,3 +138,9 @@ body .site-header{min-height:56px;padding:8px 18px;gap:12px 20px}
 
 .legal-details-fold{margin:16px 0;border:1px solid #dce5ea;border-radius:10px;padding:12px;background:#f8fafb}
 .legal-details-fold>summary{font-weight:600;color:#466371;cursor:pointer;line-height:1.7}
+
+.pm-node.patent button{padding:8px 10px;gap:5px}
+.pm-node.patent b{font-size:14px;line-height:1.4;-webkit-line-clamp:2}
+.pm-node.patent small{font-size:11px;line-height:1.4;white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.pm-node.patent button.guide-match small{-webkit-line-clamp:2}
+.technical-point-evidence{padding:12px;border:1px solid #d7e5ee;background:#f5fafc;border-radius:10px;margin:12px 0}
