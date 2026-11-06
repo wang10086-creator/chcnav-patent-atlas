@@ -1,0 +1,52 @@
+{
+  "copiedLinkNewTab": true,
+  "allProductsAndLayers": {
+    "products": 16,
+    "layers": 44,
+    "searchableDocuments": 938,
+    "collapsedRouteCount": 42
+  },
+  "collapsedRouteDirect": "传播误差建模与补偿",
+  "status": "pass",
+  "publication": "CN110749912A",
+  "actualPaths": 2,
+  "paths": [
+    {
+      "key": "doc|topic||gnss|method|corrections|corrections--quality-slip|CN110749912A",
+      "patent": "CN110749912A",
+      "path": [
+        "华测导航产品专利全景",
+        "测量测绘与定位",
+        "卫星定位接收与导航系统",
+        "方法类",
+        "基准差分与精密定位解算",
+        "周跳及异常卫星观测筛选",
+        "两历元多频假设检验"
+      ]
+    },
+    {
+      "key": "doc|topic||gnss|structure|corrections|corrections--quality-slip|CN110749912A",
+      "patent": "CN110749912A",
+      "path": [
+        "华测导航产品专利全景",
+        "测量测绘与定位",
+        "卫星定位接收与导航系统",
+        "结构类",
+        "基准差分与精密定位解算",
+        "周跳及异常卫星观测筛选",
+        "周跳检验功能模块"
+      ]
+    }
+  ],
+  "knownMultipath": {
+    "publication": "CN104697526A",
+    "documents": 1,
+    "paths": 2
+  },
+  "refreshAndHistory": true,
+  "panZoomAndRecenter": true,
+  "invalidPathFallback": true,
+  "mobileNoOverflow": true,
+  "baselineDocuments": 938,
+  "pageErrors": []
+}

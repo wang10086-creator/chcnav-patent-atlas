@@ -36,10 +36,10 @@ try:
    p.locator('.located').click()
   assert steps==['overview','product','path','topic'],steps
   assert p.locator('.guide-target').get_attribute('data-pm-patent')==target
-  assert p.locator('.guide-target').evaluate('(e)=>{const r=e.getBoundingClientRect(),v=e.closest(".pm-viewport").getBoundingClientRect();return r.left>=v.left&&r.right<=v.right&&r.top>=v.top&&r.bottom<=v.bottom;}')
+  p.wait_for_function('()=>{const e=document.querySelector(".guide-target"),r=e.getBoundingClientRect(),v=e.closest(".pm-viewport").getBoundingClientRect();return r.left>=v.left&&r.right<=v.right&&r.top>=v.top&&r.bottom<=v.bottom;}')
   p.locator('.guide-target').click()
   assert p.locator('#patent-drawer').count()==0
-  detail=p.locator('#node-detail-content').inner_text()
+  detail=p.locator('#node-detail-content').text_content()
   assert all(x in detail for x in [target,'法律状态与地域','2026-11-03','非实时状态','未官方核验','申请／公布地域','原始摘要与元信息'])
   assert p.locator('#node-detail-content .pdf-links a').count()>=1
   assert p.locator('#node-detail-content').evaluate('(e)=>e.scrollHeight>e.clientHeight')
