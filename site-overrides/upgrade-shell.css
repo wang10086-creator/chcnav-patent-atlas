@@ -135,3 +135,6 @@ body .site-header{min-height:56px;padding:8px 18px;gap:12px 20px}
 .category-coverage{margin:16px 0;padding:12px;background:#f8fafb;border:1px solid #dfe7ec;border-radius:10px}
 .category-coverage p{font-size:13px}.category-coverage button{white-space:normal}
 @media(max-width:720px){.pm-filter-summary{max-height:150px;font-size:12px}.pm-filter-summary .pm-filter-total{font-size:12px}}
+
+.legal-details-fold{margin:16px 0;border:1px solid #dce5ea;border-radius:10px;padding:12px;background:#f8fafb}
+.legal-details-fold>summary{font-weight:600;color:#466371;cursor:pointer;line-height:1.7}
